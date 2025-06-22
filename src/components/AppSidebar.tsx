@@ -87,7 +87,7 @@ export function AppSidebar() {
           <div className="flex flex-col items-center space-y-2">
             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-slate-200">
               <img 
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=face"
+                src="/lovable-uploads/20890228-6919-4738-a10b-77ad7b06de2e.png"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
