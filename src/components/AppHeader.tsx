@@ -65,7 +65,7 @@ export function AppHeader() {
 
         <div className="w-8 h-8 rounded-full overflow-hidden border border-slate-200">
           <img 
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face"
+            src="/lovable-uploads/9394970e-ec60-4a9a-ba34-feaa274e76f8.png"
             alt="Profile"
             className="w-full h-full object-cover"
           />

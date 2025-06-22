@@ -71,20 +71,30 @@ const menuItems = [
     title: "Reports",
     icon: FileText,
     url: "/reports"
+  },
+  {
+    title: "Settings",
+    icon: Settings,
+    url: "/settings"
+  },
+  {
+    title: "Help",
+    icon: HelpCircle,
+    url: "/help"
   }
 ];
 
 export function AppSidebar() {
   return (
-    <Sidebar className="border-r border-slate-200">
+    <Sidebar className="border-r border-slate-200" collapsible="icon">
       <SidebarHeader className="p-6 border-b border-slate-100">
         <div className="flex flex-col items-center space-y-4">
           <img 
             src="/lovable-uploads/37183cdd-6c21-47a1-acda-93f71a55d7f5.png" 
             alt="EasyDo" 
-            className="w-20 h-auto"
+            className="w-20 h-auto group-data-[collapsible=icon]:w-8"
           />
-          <div className="flex flex-col items-center space-y-2">
+          <div className="flex flex-col items-center space-y-2 group-data-[collapsible=icon]:hidden">
             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-slate-200">
               <img 
                 src="/lovable-uploads/20890228-6919-4738-a10b-77ad7b06de2e.png"
@@ -135,26 +145,8 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="p-4 border-t border-slate-100">
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton asChild className="h-12 px-4 rounded-lg text-slate-700 hover:bg-slate-50">
-              <a href="/settings" className="flex items-center space-x-3">
-                <Settings className="w-5 h-5 text-slate-500" />
-                <span className="text-sm font-medium">Settings</span>
-              </a>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          <SidebarMenuItem>
-            <SidebarMenuButton asChild className="h-12 px-4 rounded-lg text-slate-700 hover:bg-slate-50">
-              <a href="/help" className="flex items-center space-x-3">
-                <HelpCircle className="w-5 h-5 text-slate-500" />
-                <span className="text-sm font-medium">Help</span>
-              </a>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
-        <div className="mt-4 text-center">
+      <SidebarFooter className="p-4 border-t border-slate-100 group-data-[collapsible=icon]:hidden">
+        <div className="text-center">
           <p className="text-xs text-slate-500">COPYRIGHT © 2025</p>
         </div>
       </SidebarFooter>

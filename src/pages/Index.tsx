@@ -170,8 +170,8 @@ const Index = () => {
                   Personal Productivity & Communication
                 </h2>
                 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                  {/* Recent Chat Activity */}
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                  {/* Recent Chat Activity - now spans 2 columns */}
                   <RecentChatActivity />
 
                   {/* My Daily Work Status */}
