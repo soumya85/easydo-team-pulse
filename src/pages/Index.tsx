@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { RecentChatActivity } from "@/components/RecentChatActivity";
 import { 
   CheckSquare, 
   Calendar, 
@@ -162,14 +163,17 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Work Status Section */}
+              {/* Mid-Row Section - Recent Chat Activity + Work Status */}
               <div className="mb-8">
                 <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center">
-                  <div className="w-1 h-6 bg-purple-600 rounded mr-3"></div>
-                  Work Status
+                  <div className="w-1 h-6 bg-indigo-600 rounded mr-3"></div>
+                  Personal Productivity & Communication
                 </h2>
                 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                  {/* Recent Chat Activity */}
+                  <RecentChatActivity />
+
                   {/* My Daily Work Status */}
                   <Card>
                     <CardContent className="p-6">
