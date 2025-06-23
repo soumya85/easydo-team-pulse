@@ -86,33 +86,21 @@ const menuItems = [
 export function AppSidebar() {
   return (
     <Sidebar className="border-r border-slate-200" collapsible="icon">
-      <SidebarHeader className="p-6 border-b border-slate-100 group-data-[collapsible=icon]:p-4 group-data-[collapsible=icon]:border-none">
-        <div className="flex flex-col items-center space-y-4 group-data-[collapsible=icon]:space-y-3">
-          {/* Logo - visible in both modes */}
-          <div className="w-8 h-8 bg-gradient-to-br from-red-500 via-yellow-500 to-green-500 rounded-full flex items-center justify-center group-data-[state=expanded]:w-20 group-data-[state=expanded]:h-auto">
-            <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center group-data-[state=expanded]:hidden">
-              <div className="w-3 h-3 bg-blue-600 rounded-full flex items-center justify-center">
-                <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-              </div>
-            </div>
-            <img
-              src="/lovable-uploads/37183cdd-6c21-47a1-acda-93f71a55d7f5.png"
-              alt="EasyDo"
-              className="w-20 h-auto hidden group-data-[state=expanded]:block"
-            />
-          </div>
-
-          {/* Profile section in collapsed mode */}
-          <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-slate-200 group-data-[state=expanded]:w-16 group-data-[state=expanded]:h-16">
-            <img
-              src="/lovable-uploads/20890228-6919-4738-a10b-77ad7b06de2e.png"
-              alt="Profile"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Extended profile info - only in expanded mode */}
+      <SidebarHeader className="p-6 border-b border-slate-100">
+        <div className="flex flex-col items-center space-y-4">
+          <img
+            src="/lovable-uploads/37183cdd-6c21-47a1-acda-93f71a55d7f5.png"
+            alt="EasyDo"
+            className="w-20 h-auto group-data-[collapsible=icon]:w-8"
+          />
           <div className="flex flex-col items-center space-y-2 group-data-[collapsible=icon]:hidden">
+            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-slate-200">
+              <img
+                src="/lovable-uploads/20890228-6919-4738-a10b-77ad7b06de2e.png"
+                alt="Profile"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="text-center">
               <div className="flex items-center space-x-1">
                 <h3 className="font-semibold text-slate-900">Bhaskar Ghosh</h3>
