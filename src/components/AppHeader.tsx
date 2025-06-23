@@ -49,10 +49,8 @@ export function AppHeader() {
             </div>
           </div>
 
-          {/* Mobile center title */}
-          <div className="flex-1 flex justify-center md:hidden">
-            <h1 className="text-lg font-semibold text-foreground">DASHBOARD</h1>
-          </div>
+          {/* Mobile center title - Dashboard text removed as requested */}
+          <div className="flex-1 flex justify-center md:hidden"></div>
 
           {/* Mobile CREATE button */}
           <Button className="bg-blue-600 hover:bg-blue-700 text-white h-8 px-3 text-sm md:hidden">
