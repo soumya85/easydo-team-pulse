@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -22,16 +21,17 @@ const mockChats: ChatItem[] = [
     avatar: "/lovable-uploads/20890228-6919-4738-a10b-77ad7b06de2e.png",
     lastMessage: "Can we schedule the meeting for tomorrow?",
     timestamp: "5m ago",
-    unreadCount: 3
+    unreadCount: 3,
   },
   {
     id: "2",
     name: "Project Team Alpha",
     avatar: "/lovable-uploads/37183cdd-6c21-47a1-acda-93f71a55d7f5.png",
-    lastMessage: "The latest updates have been pushed to the development branch",
+    lastMessage:
+      "The latest updates have been pushed to the development branch",
     timestamp: "12m ago",
     unreadCount: 5,
-    isGroup: true
+    isGroup: true,
   },
   {
     id: "3",
@@ -39,17 +39,18 @@ const mockChats: ChatItem[] = [
     avatar: "/lovable-uploads/20890228-6919-4738-a10b-77ad7b06de2e.png",
     lastMessage: "Thanks for the quick response!",
     timestamp: "1h ago",
-    unreadCount: 2
+    unreadCount: 2,
   },
   {
     id: "4",
     name: "HR Department",
     avatar: "/lovable-uploads/37183cdd-6c21-47a1-acda-93f71a55d7f5.png",
-    lastMessage: "Please review the updated policy document and provide feedback",
+    lastMessage:
+      "Please review the updated policy document and provide feedback",
     timestamp: "Yesterday",
     unreadCount: 4,
-    isGroup: true
-  }
+    isGroup: true,
+  },
 ];
 
 export function RecentChatActivity() {
@@ -68,20 +69,24 @@ export function RecentChatActivity() {
   };
 
   return (
-    <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200 col-span-2">
+    <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200">
       <CardContent className="p-8">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center">
             <MessageSquare className="w-6 h-6 text-blue-600 mr-3" />
-            <span className="font-semibold text-lg text-slate-900">Recent Chat Activity</span>
+            <span className="font-semibold text-lg text-slate-900">
+              Recent Chat Activity
+            </span>
           </div>
           <Badge className="bg-red-500 text-white px-4 py-2 text-base font-bold">
             {totalUnreadCount}
           </Badge>
         </div>
-        
+
         <div className="text-center mb-8">
-          <div className="text-4xl font-bold text-blue-600 mb-2">{totalUnreadCount}</div>
+          <div className="text-4xl font-bold text-blue-600 mb-2">
+            {totalUnreadCount}
+          </div>
           <div className="text-base text-slate-600">Unread Messages</div>
         </div>
 
@@ -102,38 +107,41 @@ export function RecentChatActivity() {
                 {chat.unreadCount > 0 && (
                   <div className="absolute -top-1 -right-1 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
                     <span className="text-xs font-bold text-white">
-                      {chat.unreadCount > 9 ? '9+' : chat.unreadCount}
+                      {chat.unreadCount > 9 ? "9+" : chat.unreadCount}
                     </span>
                   </div>
                 )}
               </div>
-              
+
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between mb-1">
                   <h4 className="font-semibold text-slate-900 truncate text-base">
                     {chat.name}
                     {chat.isGroup && (
-                      <span className="ml-2 text-sm text-slate-500">(Group)</span>
+                      <span className="ml-2 text-sm text-slate-500">
+                        (Group)
+                      </span>
                     )}
                   </h4>
-                  <span className="text-sm text-slate-500 ml-2">{chat.timestamp}</span>
+                  <span className="text-sm text-slate-500 ml-2">
+                    {chat.timestamp}
+                  </span>
                 </div>
                 <p className="text-sm text-slate-600 truncate mt-1 leading-relaxed">
-                  {chat.lastMessage.length > 50 
+                  {chat.lastMessage.length > 50
                     ? `${chat.lastMessage.substring(0, 50)}...`
-                    : chat.lastMessage
-                  }
+                    : chat.lastMessage}
                 </p>
               </div>
-              
+
               <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-blue-600 transition-colors" />
             </div>
           ))}
         </div>
 
-        <Button 
+        <Button
           onClick={handleViewAllChats}
-          variant="ghost" 
+          variant="ghost"
           className="w-full text-blue-600 hover:bg-blue-100 border border-blue-200 h-12 text-base font-medium"
         >
           <MessageSquare className="w-5 h-5 mr-2" />
