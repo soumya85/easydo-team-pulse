@@ -480,126 +480,139 @@ const Index = () => {
                     </CardContent>
                   </Card>
 
-                  {/* Company Performance */}
+                  {/* Salary Snapshot */}
                   <Card className="w-full min-w-0">
                     <CardContent className="p-4 md:p-6 w-full">
                       <div className="flex items-center mb-4">
-                        <TrendingUp className="w-4 md:w-5 h-4 md:h-5 text-indigo-600 mr-2" />
+                        <Star className="w-4 md:w-5 h-4 md:h-5 text-green-600 mr-2" />
                         <span className="font-medium text-slate-900 text-sm md:text-base">
-                          Company Performance
+                          Salary Snapshot
                         </span>
                       </div>
 
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center space-x-2">
-                            <DollarSign className="w-4 h-4 text-green-600" />
-                            <span className="text-xs md:text-sm text-slate-700">
-                              Q4 Revenue
-                            </span>
-                          </div>
-                          <span className="text-sm font-bold text-green-600">
-                            +15%
-                          </span>
+                      {/* Last Net Pay */}
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4 relative">
+                        <div className="absolute top-2 right-2 text-xs text-green-600 font-medium">
+                          📈 +12%
                         </div>
-
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center space-x-2">
-                            <Users className="w-4 h-4 text-blue-600" />
-                            <span className="text-xs md:text-sm text-slate-700">
-                              Team Efficiency
-                            </span>
-                          </div>
-                          <span className="text-sm font-bold text-blue-600">
-                            92%
-                          </span>
+                        <div className="text-2xl md:text-3xl font-bold text-green-600 mb-1">
+                          ₹ 50,000.00
                         </div>
-
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center space-x-2">
-                            <Star className="w-4 h-4 text-yellow-600" />
-                            <span className="text-xs md:text-sm text-slate-700">
-                              Client Satisfaction
-                            </span>
-                          </div>
-                          <span className="text-sm font-bold text-yellow-600">
-                            4.8/5
-                          </span>
+                        <div className="text-sm font-medium text-green-700">
+                          Last Net Pay
                         </div>
-
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center space-x-2">
-                            <FileText className="w-4 h-4 text-purple-600" />
-                            <span className="text-xs md:text-sm text-slate-700">
-                              Projects Completed
-                            </span>
-                          </div>
-                          <span className="text-sm font-bold text-purple-600">
-                            87
-                          </span>
+                        <div className="text-xs text-green-600 mt-1">
+                          vs previous month
                         </div>
                       </div>
 
-                      <Button
-                        variant="ghost"
-                        className="w-full mt-4 text-indigo-600 hover:bg-indigo-50 text-sm"
-                      >
-                        View Full Analytics
-                      </Button>
+                      {/* Next Payslip */}
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                        <div className="flex items-center mb-2">
+                          <Calendar className="w-4 h-4 text-blue-600 mr-2" />
+                          <span className="text-sm font-medium text-blue-800">
+                            Next Payslip
+                          </span>
+                        </div>
+                        <div className="text-xl font-bold text-blue-600">
+                          15
+                        </div>
+                        <div className="text-xs text-blue-600">
+                          Days Remaining
+                        </div>
+                      </div>
+
+                      {/* Tax and PF */}
+                      <div className="grid grid-cols-2 gap-3 mb-4">
+                        <div className="bg-purple-50 border border-purple-200 rounded p-3 text-center">
+                          <div className="text-lg font-bold text-purple-600">
+                            ₹8,500
+                          </div>
+                          <div className="text-xs text-purple-600">
+                            Tax Deducted
+                          </div>
+                        </div>
+                        <div className="bg-orange-50 border border-orange-200 rounded p-3 text-center">
+                          <div className="text-lg font-bold text-orange-600">
+                            ₹2,200
+                          </div>
+                          <div className="text-xs text-orange-600">
+                            PF Contribution
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Action Buttons */}
+                      <div className="space-y-2">
+                        <Button className="w-full bg-green-600 hover:bg-green-700 text-white text-sm">
+                          💳 Request Salary Advance
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          className="w-full text-slate-600 hover:bg-slate-50 text-sm"
+                        >
+                          View All Payslips
+                        </Button>
+                      </div>
                     </CardContent>
                   </Card>
 
-                  {/* Quick Access Links */}
+                  {/* My Performance */}
                   <Card className="w-full min-w-0">
                     <CardContent className="p-4 md:p-6 w-full">
                       <div className="flex items-center mb-4">
-                        <StickyNote className="w-4 md:w-5 h-4 md:h-5 text-slate-600 mr-2" />
+                        <Star className="w-4 md:w-5 h-4 md:h-5 text-yellow-500 mr-2" />
                         <span className="font-medium text-slate-900 text-sm md:text-base">
-                          Quick Access
+                          My Performance
                         </span>
                       </div>
 
-                      <div className="space-y-3">
-                        <Button
-                          variant="ghost"
-                          className="w-full justify-between text-slate-700 hover:bg-slate-50 text-sm"
-                        >
-                          <span>Employee Directory</span>
-                          <ChevronRight className="w-4 h-4" />
-                        </Button>
-
-                        <Button
-                          variant="ghost"
-                          className="w-full justify-between text-slate-700 hover:bg-slate-50 text-sm"
-                        >
-                          <span>IT Support</span>
-                          <ChevronRight className="w-4 h-4" />
-                        </Button>
-
-                        <Button
-                          variant="ghost"
-                          className="w-full justify-between text-slate-700 hover:bg-slate-50 text-sm"
-                        >
-                          <span>HR Policies</span>
-                          <ChevronRight className="w-4 h-4" />
-                        </Button>
-
-                        <Button
-                          variant="ghost"
-                          className="w-full justify-between text-slate-700 hover:bg-slate-50 text-sm"
-                        >
-                          <span>Company Calendar</span>
-                          <ChevronRight className="w-4 h-4" />
-                        </Button>
-
-                        <Button
-                          variant="ghost"
-                          className="w-full justify-between text-slate-700 hover:bg-slate-50 text-sm"
-                        >
-                          <span>Training Materials</span>
-                          <ChevronRight className="w-4 h-4" />
-                        </Button>
+                      {/* Rating */}
+                      <div className="text-center mb-4">
+                        <div className="flex justify-center mb-2">
+                          <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                          <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                          <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                          <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                          <Star className="w-5 h-5 text-gray-300" />
+                        </div>
+                        <div className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">
+                          4.4
+                        </div>
+                        <div className="text-xs text-slate-600">
+                          Average rating from 23 task reviews
+                        </div>
                       </div>
+
+                      {/* Encouragement Message */}
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3 mb-4 text-center">
+                        <div className="text-sm font-medium text-green-700">
+                          Nice, Keep it up! 🎉
+                        </div>
+                      </div>
+
+                      {/* Employee of the Month */}
+                      <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-lg p-4 mb-4">
+                        <div className="text-center">
+                          <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <span className="text-white text-lg">🏆</span>
+                          </div>
+                          <div className="font-medium text-orange-700 text-sm">
+                            Employee of the Month
+                          </div>
+                          <div className="text-xs text-orange-600 mt-1">
+                            June 2025
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Action Button */}
+                      <Button
+                        variant="ghost"
+                        className="w-full text-slate-600 hover:bg-slate-50 text-sm"
+                      >
+                        View Performance Details
+                      </Button>
                     </CardContent>
                   </Card>
                 </div>
