@@ -112,6 +112,22 @@ export function AppHeader() {
 
         {/* Right side icons - Mobile */}
         <div className="flex md:hidden items-center space-x-2">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-8 w-8 p-0"
+            onClick={toggleTheme}
+            title={
+              theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+            }
+          >
+            {theme === "dark" ? (
+              <Sun className="w-4 h-4" />
+            ) : (
+              <Moon className="w-4 h-4" />
+            )}
+          </Button>
+
           <div className="relative">
             <Button variant="ghost" size="sm" className="h-8 w-8 p-0 relative">
               <Bell className="w-4 h-4" />
@@ -130,7 +146,7 @@ export function AppHeader() {
             </Button>
           </div>
 
-          <div className="w-7 h-7 rounded-full overflow-hidden border border-slate-200">
+          <div className="w-7 h-7 rounded-full overflow-hidden border border-border">
             <img
               src="/lovable-uploads/9394970e-ec60-4a9a-ba34-feaa274e76f8.png"
               alt="Profile"
