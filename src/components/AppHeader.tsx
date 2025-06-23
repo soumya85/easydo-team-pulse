@@ -62,7 +62,7 @@ export function AppHeader() {
           </Button>
 
           <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
-            <RefreshCw className="w-4 h-4" />
+            <Moon className="w-4 h-4" />
           </Button>
 
           <div className="relative">
