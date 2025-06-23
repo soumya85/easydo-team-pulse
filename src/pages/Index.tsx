@@ -62,12 +62,15 @@ const Index = () => {
 
                         <Tabs defaultValue="my-tasks" className="w-full">
                           <TabsList className="grid w-full grid-cols-2 mb-4">
-                            <TabsTrigger value="my-tasks" className="text-xs">
+                            <TabsTrigger
+                              value="my-tasks"
+                              className="text-xs data-[state=active]:border-2 data-[state=active]:border-blue-600"
+                            >
                               My Task
                             </TabsTrigger>
                             <TabsTrigger
                               value="delegated-tasks"
-                              className="text-xs"
+                              className="text-xs data-[state=active]:border-2 data-[state=active]:border-blue-600"
                             >
                               Delegated Task
                             </TabsTrigger>
