@@ -1,15 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import { Bell, Plus, Moon, ChevronDown, Filter } from "lucide-react";
+import { Bell, Plus, Moon, Sun, ChevronDown, Filter } from "lucide-react";
 import { useState } from "react";
+import { useTheme } from "next-themes";
 
 export function AppHeader() {
   const [isFilterDropdownOpen, setIsFilterDropdownOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   return (
     <>
       {/* Main Header */}
-      <header className="h-16 border-b border-slate-200 bg-white px-3 md:px-6 flex items-center justify-between fixed top-0 left-0 md:left-64 right-0 z-50">
+      <header className="h-16 border-b border-border bg-background px-3 md:px-6 flex items-center justify-between fixed top-0 left-0 md:left-64 right-0 z-50">
         <div className="flex items-center space-x-2 md:space-x-4 flex-1 min-w-0">
           <SidebarTrigger className="h-8 w-8 md:hidden flex-shrink-0" />
 
@@ -24,7 +30,7 @@ export function AppHeader() {
 
           {/* Desktop layout */}
           <div className="hidden md:flex items-center space-x-6 flex-1">
-            <h1 className="text-xl font-semibold text-slate-900">DASHBOARD</h1>
+            <h1 className="text-xl font-semibold text-foreground">DASHBOARD</h1>
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <span className="text-sm text-slate-600">Company</span>
@@ -45,7 +51,7 @@ export function AppHeader() {
 
           {/* Mobile center title */}
           <div className="flex-1 flex justify-center md:hidden">
-            <h1 className="text-lg font-semibold text-slate-900">DASHBOARD</h1>
+            <h1 className="text-lg font-semibold text-foreground">DASHBOARD</h1>
           </div>
 
           {/* Mobile CREATE button */}
@@ -61,8 +67,20 @@ export function AppHeader() {
             CREATE
           </Button>
 
-          <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
-            <Moon className="w-4 h-4" />
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-9 w-9 p-0"
+            onClick={toggleTheme}
+            title={
+              theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+            }
+          >
+            {theme === "dark" ? (
+              <Sun className="w-4 h-4" />
+            ) : (
+              <Moon className="w-4 h-4" />
+            )}
           </Button>
 
           <div className="relative">
@@ -123,13 +141,13 @@ export function AppHeader() {
       </header>
 
       {/* Mobile Sub-Header with Company/Branch selectors */}
-      <div className="md:hidden fixed top-16 left-0 right-0 z-40 bg-white border-b border-slate-200 px-4 py-3">
+      <div className="md:hidden fixed top-16 left-0 right-0 z-40 bg-background border-b border-border px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex-1">
-            <div className="text-sm font-medium text-slate-900 mb-1">
+            <div className="text-sm font-medium text-foreground mb-1">
               Liberty Highrise PVT Ltd
             </div>
-            <div className="flex items-center text-sm text-slate-600">
+            <div className="flex items-center text-sm text-muted-foreground">
               <ChevronDown className="w-4 h-4 mr-1" />
               <span>All Branch</span>
             </div>
@@ -155,11 +173,11 @@ export function AppHeader() {
             />
 
             {/* Dropdown Content */}
-            <div className="absolute top-full left-4 right-4 mt-1 bg-white border border-slate-200 rounded-lg shadow-lg z-50">
+            <div className="absolute top-full left-4 right-4 mt-1 bg-background border border-border rounded-lg shadow-lg z-50">
               <div className="p-4 space-y-4">
                 {/* Company Row */}
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-slate-700">
+                  <span className="text-sm font-medium text-foreground">
                     Company
                   </span>
                   <Button
@@ -174,7 +192,7 @@ export function AppHeader() {
 
                 {/* Branch Row */}
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-slate-700">
+                  <span className="text-sm font-medium text-foreground">
                     Branch
                   </span>
                   <Button
