@@ -31,17 +31,20 @@ const Index = () => {
           <AppHeader />
 
           {/* Main Dashboard Content */}
-          <main className="flex-1 px-2 py-3 md:p-6 overflow-auto pt-32 md:pt-22 w-full">
-            <div className="max-w-7xl mx-auto w-full px-0">
-              {/* Welcome Header */}
-              <div className="mb-4 md:mb-6 w-full pr-2 md:pr-0">
-                <h1 className="text-xl md:text-2xl font-semibold text-slate-900 break-words">
-                  Good morning, Bhaskar! 👋
-                </h1>
-                <p className="text-slate-600 mt-1 text-sm md:text-base break-words">
-                  Here's what's happening with your work today
-                </p>
+          <main className="flex-1 overflow-auto pt-32 md:pt-22 w-full">
+            <div className="px-4 py-3 md:p-6 w-full">
+              <div className="max-w-7xl mx-auto w-full">
+                {/* Welcome Header */}
+                <div className="mb-4 md:mb-6 w-full">
+                  <h1 className="text-xl md:text-2xl font-semibold text-slate-900 break-words">
+                    Good morning, Bhaskar! 👋
+                  </h1>
+                  <p className="text-slate-600 mt-1 text-sm md:text-base break-words">
+                    Here's what's happening with your work today
+                  </p>
+                </div>
               </div>
+            </div>
 
               {/* Dashboard Content */}
               <div className="mb-6 md:mb-8 w-full">
