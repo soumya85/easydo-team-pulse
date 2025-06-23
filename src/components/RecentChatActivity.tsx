@@ -70,7 +70,7 @@ export function RecentChatActivity() {
 
   return (
     <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200">
-      <CardContent className="p-8">
+      <CardContent className="p-4 md:p-6">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center">
             <MessageSquare className="w-6 h-6 text-blue-600 mr-3" />
