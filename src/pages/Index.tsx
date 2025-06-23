@@ -124,7 +124,7 @@ const Index = () => {
                                 <Progress value={85} className="h-2" />
                               </div>
                             </div>
-                            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm mt-auto">
+                            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm">
                               View All My Tasks
                             </Button>
                           </TabsContent>
