@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import { Bell, Plus, RefreshCw, ChevronDown, Filter } from "lucide-react";
+import { Bell, Plus, Moon, ChevronDown, Filter } from "lucide-react";
 import { useState } from "react";
 
 export function AppHeader() {
