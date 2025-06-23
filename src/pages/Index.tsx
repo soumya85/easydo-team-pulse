@@ -62,7 +62,7 @@ const Index = () => {
 
                         <Tabs
                           defaultValue="my-tasks"
-                          className="w-full flex flex-col flex-grow"
+                          className="w-full h-full flex flex-col"
                         >
                           <TabsList className="grid w-full grid-cols-2 mb-4">
                             <TabsTrigger
@@ -81,9 +81,9 @@ const Index = () => {
 
                           <TabsContent
                             value="my-tasks"
-                            className="flex flex-col flex-grow"
+                            className="flex flex-col flex-1 data-[state=active]:flex"
                           >
-                            <div className="flex-grow space-y-4">
+                            <div className="flex-1">
                               <div className="text-center mb-4 md:mb-6">
                                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-1">
                                   472
@@ -131,9 +131,9 @@ const Index = () => {
 
                           <TabsContent
                             value="delegated-tasks"
-                            className="flex flex-col flex-grow"
+                            className="flex flex-col flex-1 data-[state=active]:flex"
                           >
-                            <div className="flex-grow space-y-4">
+                            <div className="flex-1">
                               <div className="text-center mb-4 md:mb-6">
                                 <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-1">
                                   89
