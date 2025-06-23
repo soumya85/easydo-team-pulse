@@ -399,13 +399,13 @@ const Index = () => {
                             </div>
                           </div>
                           <div className="border-l-4 border-blue-500 pl-3">
-                            <div className="font-medium text-slate-900 text-sm">
+                            <div className="font-medium text-foreground text-sm">
                               New Health Insurance Policy Updates
                             </div>
-                            <div className="text-xs text-slate-500 mt-1">
+                            <div className="text-xs text-muted-foreground mt-1">
                               1 day ago
                             </div>
-                            <div className="text-xs text-slate-600 mt-1">
+                            <div className="text-xs text-muted-foreground mt-1">
                               Important updates regarding the company health
                               insurance polic...
                             </div>
@@ -413,7 +413,7 @@ const Index = () => {
                         </div>
                         <Button
                           variant="ghost"
-                          className="w-full text-orange-600 hover:bg-orange-50 text-sm"
+                          className="w-full text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-950/30 text-sm"
                         >
                           View All Notices
                         </Button>
@@ -425,79 +425,85 @@ const Index = () => {
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <Calendar className="w-4 md:w-5 h-4 md:h-5 text-purple-600 mr-2" />
-                          <span className="font-medium text-slate-900 text-sm md:text-base">
+                          <span className="font-medium text-foreground text-sm md:text-base">
                             Monthly Attendance Summary - June 2025
                           </span>
                         </div>
 
                         <div className="text-center mb-4">
-                          <div className="text-xs md:text-sm text-slate-600 mb-2">
+                          <div className="text-xs md:text-sm text-muted-foreground mb-2">
                             Total Days: 30 | Working Days: 22
                           </div>
                         </div>
 
                         <div className="grid grid-cols-2 gap-2 md:gap-3 mb-4">
-                          <div className="text-center p-2 bg-green-50 rounded">
+                          <div className="text-center p-2 bg-green-50 dark:bg-green-950/30 rounded">
                             <div className="w-5 h-5 bg-green-500 rounded-full mx-auto mb-1 flex items-center justify-center">
                               <span className="text-white text-xs font-bold">
                                 18
                               </span>
                             </div>
-                            <div className="text-xs text-slate-600">
+                            <div className="text-xs text-muted-foreground">
                               Present
                             </div>
                           </div>
-                          <div className="text-center p-2 bg-red-50 rounded">
+                          <div className="text-center p-2 bg-red-50 dark:bg-red-950/30 rounded">
                             <div className="w-5 h-5 bg-red-500 rounded-full mx-auto mb-1 flex items-center justify-center">
                               <span className="text-white text-xs font-bold">
                                 2
                               </span>
                             </div>
-                            <div className="text-xs text-slate-600">Absent</div>
+                            <div className="text-xs text-muted-foreground">
+                              Absent
+                            </div>
                           </div>
-                          <div className="text-center p-2 bg-blue-50 rounded">
+                          <div className="text-center p-2 bg-blue-50 dark:bg-blue-950/30 rounded">
                             <div className="w-5 h-5 bg-blue-500 rounded-full mx-auto mb-1 flex items-center justify-center">
                               <span className="text-white text-xs font-bold">
                                 3
                               </span>
                             </div>
-                            <div className="text-xs text-slate-600">Leave</div>
+                            <div className="text-xs text-muted-foreground">
+                              Leave
+                            </div>
                           </div>
-                          <div className="text-center p-2 bg-orange-50 rounded">
+                          <div className="text-center p-2 bg-orange-50 dark:bg-orange-950/30 rounded">
                             <div className="w-5 h-5 bg-orange-500 rounded-full mx-auto mb-1 flex items-center justify-center">
                               <span className="text-white text-xs font-bold">
                                 5
                               </span>
                             </div>
-                            <div className="text-xs text-slate-600">
+                            <div className="text-xs text-muted-foreground">
                               Holiday
                             </div>
                           </div>
-                          <div className="text-center p-2 bg-yellow-50 rounded">
+                          <div className="text-center p-2 bg-yellow-50 dark:bg-yellow-950/30 rounded">
                             <div className="w-5 h-5 bg-yellow-500 rounded-full mx-auto mb-1 flex items-center justify-center">
                               <span className="text-white text-xs font-bold">
                                 4
                               </span>
                             </div>
-                            <div className="text-xs text-slate-600">Late</div>
+                            <div className="text-xs text-muted-foreground">
+                              Late
+                            </div>
                           </div>
-                          <div className="text-center p-2 bg-purple-50 rounded">
+                          <div className="text-center p-2 bg-purple-50 dark:bg-purple-950/30 rounded">
                             <div className="w-5 h-5 bg-purple-500 rounded-full mx-auto mb-1 flex items-center justify-center">
                               <span className="text-white text-xs font-bold">
                                 1
                               </span>
                             </div>
-                            <div className="text-xs text-slate-600">
+                            <div className="text-xs text-muted-foreground">
                               Halfday
                             </div>
                           </div>
-                          <div className="text-center p-2 bg-pink-50 rounded col-span-2">
+                          <div className="text-center p-2 bg-pink-50 dark:bg-pink-950/30 rounded col-span-2">
                             <div className="w-5 h-5 bg-pink-500 rounded-full mx-auto mb-1 flex items-center justify-center">
                               <span className="text-white text-xs font-bold">
                                 0
                               </span>
                             </div>
-                            <div className="text-xs text-slate-600">
+                            <div className="text-xs text-muted-foreground">
                               Red Flag
                             </div>
                           </div>
@@ -505,7 +511,7 @@ const Index = () => {
 
                         <Button
                           variant="ghost"
-                          className="w-full text-purple-600 hover:bg-purple-50 text-sm"
+                          className="w-full text-purple-600 hover:bg-purple-50 dark:hover:bg-purple-950/30 text-sm"
                         >
                           View Detailed Report
                         </Button>
@@ -517,20 +523,20 @@ const Index = () => {
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <Star className="w-4 md:w-5 h-4 md:h-5 text-green-600 mr-2" />
-                          <span className="font-medium text-slate-900 text-sm md:text-base">
+                          <span className="font-medium text-foreground text-sm md:text-base">
                             Salary Snapshot
                           </span>
                         </div>
 
                         {/* Last Net Pay */}
-                        <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4 relative">
+                        <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-lg p-4 mb-4 relative">
                           <div className="absolute top-2 right-2 text-xs text-green-600 font-medium">
                             📈 +12%
                           </div>
                           <div className="text-2xl md:text-3xl font-bold text-green-600 mb-1">
                             ₹ 50,000.00
                           </div>
-                          <div className="text-sm font-medium text-green-700">
+                          <div className="text-sm font-medium text-green-700 dark:text-green-400">
                             Last Net Pay
                           </div>
                           <div className="text-xs text-green-600 mt-1">
@@ -539,10 +545,10 @@ const Index = () => {
                         </div>
 
                         {/* Next Payslip */}
-                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                        <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-3 mb-4">
                           <div className="flex items-center mb-2">
                             <Calendar className="w-4 h-4 text-blue-600 mr-2" />
-                            <span className="text-sm font-medium text-blue-800">
+                            <span className="text-sm font-medium text-blue-800 dark:text-blue-400">
                               Next Payslip
                             </span>
                           </div>
@@ -556,7 +562,7 @@ const Index = () => {
 
                         {/* Tax and PF */}
                         <div className="grid grid-cols-2 gap-3 mb-4">
-                          <div className="bg-purple-50 border border-purple-200 rounded p-3 text-center">
+                          <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded p-3 text-center">
                             <div className="text-lg font-bold text-purple-600">
                               ₹8,500
                             </div>
@@ -564,7 +570,7 @@ const Index = () => {
                               Tax Deducted
                             </div>
                           </div>
-                          <div className="bg-orange-50 border border-orange-200 rounded p-3 text-center">
+                          <div className="bg-orange-50 dark:bg-orange-950/30 border border-orange-200 dark:border-orange-800 rounded p-3 text-center">
                             <div className="text-lg font-bold text-orange-600">
                               ₹2,200
                             </div>
@@ -581,7 +587,7 @@ const Index = () => {
                           </Button>
                           <Button
                             variant="ghost"
-                            className="w-full text-slate-600 hover:bg-slate-50 text-sm"
+                            className="w-full text-muted-foreground hover:bg-muted text-sm"
                           >
                             View All Payslips
                           </Button>
@@ -594,7 +600,7 @@ const Index = () => {
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <Star className="w-4 md:w-5 h-4 md:h-5 text-yellow-500 mr-2" />
-                          <span className="font-medium text-slate-900 text-sm md:text-base">
+                          <span className="font-medium text-foreground text-sm md:text-base">
                             My Performance
                           </span>
                         </div>
