@@ -1,17 +1,11 @@
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import { 
-  Bell, 
-  Plus,
-  RefreshCw,
-  ChevronDown
-} from "lucide-react";
+import { Bell, Plus, RefreshCw, ChevronDown } from "lucide-react";
 
 export function AppHeader() {
   return (
-    <header className="h-16 border-b border-slate-200 bg-white px-6 flex items-center justify-between sticky top-0 z-40">
+    <header className="h-16 border-b border-slate-200 bg-white px-6 flex items-center justify-between fixed top-0 left-64 right-0 z-50">
       <div className="flex items-center space-x-4">
         <SidebarTrigger className="h-8 w-8" />
         <div className="flex items-center space-x-6">
@@ -40,7 +34,7 @@ export function AppHeader() {
           <Plus className="w-4 h-4 mr-2" />
           CREATE
         </Button>
-        
+
         <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
           <RefreshCw className="w-4 h-4" />
         </Button>
@@ -64,7 +58,7 @@ export function AppHeader() {
         </div>
 
         <div className="w-8 h-8 rounded-full overflow-hidden border border-slate-200">
-          <img 
+          <img
             src="/lovable-uploads/9394970e-ec60-4a9a-ba34-feaa274e76f8.png"
             alt="Profile"
             className="w-full h-full object-cover"
