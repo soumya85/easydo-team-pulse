@@ -60,7 +60,10 @@ const Index = () => {
                           </span>
                         </div>
 
-                        <Tabs defaultValue="my-tasks" className="w-full">
+                        <Tabs
+                          defaultValue="my-tasks"
+                          className="w-full flex flex-col flex-grow"
+                        >
                           <TabsList className="grid w-full grid-cols-2 mb-4">
                             <TabsTrigger
                               value="my-tasks"
@@ -76,7 +79,10 @@ const Index = () => {
                             </TabsTrigger>
                           </TabsList>
 
-                          <TabsContent value="my-tasks" className="space-y-4">
+                          <TabsContent
+                            value="my-tasks"
+                            className="flex flex-col flex-grow space-y-4"
+                          >
                             <div className="text-center mb-4 md:mb-6">
                               <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-1">
                                 472
