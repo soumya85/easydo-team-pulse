@@ -27,11 +27,11 @@ const Index = () => {
     <SidebarProvider>
       <div className="min-h-screen flex w-full overflow-hidden">
         <AppSidebar />
-        <SidebarInset className="flex-1 min-w-0">
+        <SidebarInset className="flex-1 min-w-0 w-full">
           <AppHeader />
 
           {/* Main Dashboard Content */}
-          <main className="flex-1 p-3 md:p-6 overflow-auto pt-32 md:pt-22">
+          <main className="flex-1 px-2 py-3 md:p-6 overflow-auto pt-32 md:pt-22 w-full">
             <div className="max-w-7xl mx-auto w-full px-0">
               {/* Welcome Header */}
               <div className="mb-4 md:mb-6 w-full pr-2 md:pr-0">
