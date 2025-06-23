@@ -62,7 +62,7 @@ const Index = () => {
 
                         <Tabs
                           defaultValue="my-tasks"
-                          className="w-full h-full flex flex-col"
+                          className="w-full flex flex-col flex-1"
                         >
                           <TabsList className="grid w-full grid-cols-2 mb-4">
                             <TabsTrigger
@@ -81,7 +81,7 @@ const Index = () => {
 
                           <TabsContent
                             value="my-tasks"
-                            className="flex flex-col flex-1 data-[state=active]:flex"
+                            className="flex flex-col flex-1"
                           >
                             <div className="flex-1">
                               <div className="text-center mb-4 md:mb-6">
