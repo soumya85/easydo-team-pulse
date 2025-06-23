@@ -183,7 +183,7 @@ const Index = () => {
                     </Card>
 
                     {/* Meetings This Week */}
-                    <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800 w-full min-w-0 flex flex-col min-h-[400px]">
+                    <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800 w-full min-w-0 flex flex-col h-[450px]">
                       <CardContent className="p-4 md:p-6 w-full flex flex-col h-full">
                         <div className="flex items-center mb-4">
                           <Calendar className="w-4 md:w-5 h-4 md:h-5 text-green-600 mr-2" />
@@ -613,7 +613,7 @@ const Index = () => {
                             📈 +12%
                           </div>
                           <div className="text-2xl md:text-3xl font-bold text-green-600 mb-1">
-                            ��� 50,000.00
+                            ₹ 50,000.00
                           </div>
                           <div className="text-sm font-medium text-green-700 dark:text-green-400">
                             Last Net Pay
