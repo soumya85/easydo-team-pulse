@@ -31,7 +31,7 @@ const Index = () => {
           <AppHeader />
 
           {/* Main Dashboard Content */}
-          <main className="flex-1 overflow-auto pt-32 md:pt-20 w-full">
+          <main className="flex-1 overflow-auto pt-32 md:pt-18 w-full">
             <div className="px-3 py-3 md:p-6 w-full">
               <div className="max-w-7xl mx-auto w-full">
                 {/* Welcome Header */}
