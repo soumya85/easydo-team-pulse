@@ -13,11 +13,11 @@ export function AppHeader() {
 
           {/* Logo for mobile - shown on small screens */}
           <div className="flex items-center md:hidden flex-shrink-0">
-            <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center">
-              <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-              </div>
-            </div>
+            <img
+              src="https://cdn.builder.io/api/v1/assets/62c95941e2ef4fb390e9f53735b0fcbd/image-9faca0?format=webp&width=800"
+              alt="Logo"
+              className="w-8 h-8 object-contain"
+            />
           </div>
 
           {/* Desktop layout */}
