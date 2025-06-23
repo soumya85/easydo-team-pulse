@@ -7,13 +7,13 @@ export function AppHeader() {
   return (
     <>
       {/* Main Header */}
-      <header className="h-16 border-b border-slate-200 bg-white px-4 md:px-6 flex items-center justify-between fixed top-0 left-0 md:left-64 right-0 z-50">
-        <div className="flex items-center space-x-3 md:space-x-4 flex-1">
-          <SidebarTrigger className="h-8 w-8 md:hidden" />
+      <header className="h-16 border-b border-slate-200 bg-white px-3 md:px-6 flex items-center justify-between fixed top-0 left-0 md:left-64 right-0 z-50">
+        <div className="flex items-center space-x-2 md:space-x-4 flex-1 min-w-0">
+          <SidebarTrigger className="h-8 w-8 md:hidden flex-shrink-0" />
 
           {/* Logo for mobile - shown on small screens */}
-          <div className="flex items-center md:hidden">
-            <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center mr-3">
+          <div className="flex items-center md:hidden flex-shrink-0">
+            <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center">
               <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
               </div>
