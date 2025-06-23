@@ -32,7 +32,7 @@ const Index = () => {
 
           {/* Main Dashboard Content */}
           <main className="flex-1 overflow-auto pt-32 md:pt-22 w-full">
-            <div className="px-4 py-3 md:p-6 w-full">
+            <div className="px-3 py-3 md:p-6 w-full">
               <div className="max-w-7xl mx-auto w-full">
                 {/* Welcome Header */}
                 <div className="mb-4 md:mb-6 w-full">
