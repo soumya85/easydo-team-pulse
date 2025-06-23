@@ -328,6 +328,53 @@ const Index = () => {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {/* Notice Board */}
+                  <Card>
+                    <CardContent className="p-6">
+                      <div className="flex items-center mb-4">
+                        <Bell className="w-5 h-5 text-orange-600 mr-2" />
+                        <span className="font-medium text-slate-900">
+                          Notice Board
+                        </span>
+                      </div>
+                      <div className="text-sm text-slate-600 mb-4">
+                        You're viewing for: All Branch
+                      </div>
+                      <div className="space-y-3 mb-4">
+                        <div className="border-l-4 border-orange-500 pl-3">
+                          <div className="font-medium text-slate-900 text-sm">
+                            Holiday Notice - Diwali Celebration
+                          </div>
+                          <div className="text-xs text-slate-500 mt-1">
+                            2 hours ago
+                          </div>
+                          <div className="text-xs text-slate-600 mt-1">
+                            Office will remain closed on October 24th for
+                            Diwali...
+                          </div>
+                        </div>
+                        <div className="border-l-4 border-blue-500 pl-3">
+                          <div className="font-medium text-slate-900 text-sm">
+                            New Health Insurance Policy Updates
+                          </div>
+                          <div className="text-xs text-slate-500 mt-1">
+                            1 day ago
+                          </div>
+                          <div className="text-xs text-slate-600 mt-1">
+                            Important updates regarding the company health
+                            insurance polic...
+                          </div>
+                        </div>
+                      </div>
+                      <Button
+                        variant="ghost"
+                        className="w-full text-orange-600 hover:bg-orange-50"
+                      >
+                        View All Notices
+                      </Button>
+                    </CardContent>
+                  </Card>
+
                   {/* Monthly Attendance Summary */}
                   <Card>
                     <CardContent className="p-6">
@@ -399,53 +446,6 @@ const Index = () => {
 
                       <Button variant="outline" className="w-full">
                         View Full Attendance
-                      </Button>
-                    </CardContent>
-                  </Card>
-
-                  {/* Notice Board */}
-                  <Card>
-                    <CardContent className="p-6">
-                      <div className="flex items-center mb-4">
-                        <Bell className="w-5 h-5 text-orange-600 mr-2" />
-                        <span className="font-medium text-slate-900">
-                          Notice Board
-                        </span>
-                      </div>
-                      <div className="text-sm text-slate-600 mb-4">
-                        You're viewing for: All Branch
-                      </div>
-                      <div className="space-y-3 mb-4">
-                        <div className="border-l-4 border-orange-500 pl-3">
-                          <div className="font-medium text-slate-900 text-sm">
-                            Holiday Notice - Diwali Celebration
-                          </div>
-                          <div className="text-xs text-slate-500 mt-1">
-                            2 hours ago
-                          </div>
-                          <div className="text-xs text-slate-600 mt-1">
-                            Office will remain closed on October 24th for
-                            Diwali...
-                          </div>
-                        </div>
-                        <div className="border-l-4 border-blue-500 pl-3">
-                          <div className="font-medium text-slate-900 text-sm">
-                            New Health Insurance Policy Updates
-                          </div>
-                          <div className="text-xs text-slate-500 mt-1">
-                            1 day ago
-                          </div>
-                          <div className="text-xs text-slate-600 mt-1">
-                            Important updates regarding the company health
-                            insurance polic...
-                          </div>
-                        </div>
-                      </div>
-                      <Button
-                        variant="ghost"
-                        className="w-full text-orange-600 hover:bg-orange-50"
-                      >
-                        View All Notices
                       </Button>
                     </CardContent>
                   </Card>
