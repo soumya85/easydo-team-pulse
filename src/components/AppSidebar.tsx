@@ -85,8 +85,8 @@ const menuItems = [
 
 export function AppSidebar() {
   return (
-    <Sidebar className="border-r border-slate-200" collapsible="icon">
-      <SidebarHeader className="p-6 border-b border-slate-100">
+    <Sidebar className="border-r border-border" collapsible="icon">
+      <SidebarHeader className="p-6 border-b border-border">
         <div className="flex flex-col items-center space-y-4">
           <img
             src="/lovable-uploads/37183cdd-6c21-47a1-acda-93f71a55d7f5.png"
@@ -94,7 +94,7 @@ export function AppSidebar() {
             className="w-20 h-auto group-data-[collapsible=icon]:w-8"
           />
           <div className="flex flex-col items-center space-y-2 group-data-[collapsible=icon]:hidden">
-            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-slate-200">
+            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-border">
               <img
                 src="/lovable-uploads/20890228-6919-4738-a10b-77ad7b06de2e.png"
                 alt="Profile"
@@ -103,15 +103,17 @@ export function AppSidebar() {
             </div>
             <div className="text-center">
               <div className="flex items-center space-x-1">
-                <h3 className="font-semibold text-slate-900">Bhaskar Ghosh</h3>
+                <h3 className="font-semibold text-foreground">Bhaskar Ghosh</h3>
                 <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
                   <div className="w-2 h-2 bg-white rounded-full"></div>
                 </div>
               </div>
-              <p className="text-sm text-slate-600">Executive Director</p>
+              <p className="text-sm text-muted-foreground">
+                Executive Director
+              </p>
               <Badge
                 variant="secondary"
-                className="mt-1 bg-blue-100 text-blue-700 hover:bg-blue-100"
+                className="mt-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/30"
               >
                 Authority Level 1
               </Badge>
@@ -131,13 +133,13 @@ export function AppSidebar() {
                     isActive={item.isActive}
                     className={`h-12 px-4 rounded-lg transition-all duration-200 ${
                       item.isActive
-                        ? "bg-blue-50 text-blue-700 font-medium shadow-sm border border-blue-100"
-                        : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
+                        ? "bg-blue-50 dark:bg-blue-950/30 text-blue-700 dark:text-blue-400 font-medium shadow-sm border border-blue-100 dark:border-blue-800"
+                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
                     }`}
                   >
                     <a href={item.url} className="flex items-center space-x-3">
                       <item.icon
-                        className={`w-5 h-5 ${item.isActive ? "text-blue-600" : "text-slate-500"}`}
+                        className={`w-5 h-5 ${item.isActive ? "text-blue-600 dark:text-blue-400" : "text-muted-foreground"}`}
                       />
                       <span className="text-sm font-medium">{item.title}</span>
                     </a>
@@ -149,9 +151,9 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="p-4 border-t border-slate-100 group-data-[collapsible=icon]:hidden">
+      <SidebarFooter className="p-4 border-t border-border group-data-[collapsible=icon]:hidden">
         <div className="text-center">
-          <p className="text-xs text-slate-500">COPYRIGHT © 2025</p>
+          <p className="text-xs text-muted-foreground">COPYRIGHT © 2025</p>
         </div>
       </SidebarFooter>
     </Sidebar>
