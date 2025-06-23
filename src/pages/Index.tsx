@@ -297,42 +297,44 @@ const Index = () => {
                       </CardContent>
                     </Card>
 
-                    {/* Quick Notes */}
-                    <Card className="bg-yellow-50 dark:bg-yellow-950/20 border-yellow-200 dark:border-yellow-800 w-full min-w-0">
-                      <CardContent className="p-4 md:p-6 w-full">
+                    {/* Notes & Reminder */}
+                    <Card className="bg-yellow-50 dark:bg-yellow-950/20 border-yellow-200 dark:border-yellow-800 w-full min-w-0 flex flex-col h-full">
+                      <CardContent className="p-4 md:p-6 w-full flex flex-col flex-grow">
                         <div className="flex items-center mb-4">
                           <StickyNote className="w-4 md:w-5 h-4 md:h-5 text-yellow-600 mr-2" />
                           <span className="font-medium text-foreground text-sm md:text-base">
                             Notes & Reminder
                           </span>
                         </div>
-                        <div className="space-y-3 mb-4">
-                          <div className="bg-card border border-border p-3 rounded">
-                            <div className="font-medium text-foreground text-sm">
-                              Follow up on client proposal
+                        <div className="flex-grow">
+                          <div className="space-y-3 mb-4">
+                            <div className="bg-card border border-border p-3 rounded">
+                              <div className="font-medium text-foreground text-sm">
+                                Follow up on client proposal
+                              </div>
+                              <div className="text-xs text-muted-foreground mt-1">
+                                Added 2 hours ago
+                              </div>
                             </div>
-                            <div className="text-xs text-muted-foreground mt-1">
-                              Added 2 hours ago
+                            <div className="bg-card border border-border p-3 rounded">
+                              <div className="font-medium text-foreground text-sm">
+                                Review Q4 budget allocation
+                              </div>
+                              <div className="text-xs text-muted-foreground mt-1">
+                                Added yesterday
+                              </div>
                             </div>
-                          </div>
-                          <div className="bg-card border border-border p-3 rounded">
-                            <div className="font-medium text-foreground text-sm">
-                              Review Q4 budget allocation
-                            </div>
-                            <div className="text-xs text-muted-foreground mt-1">
-                              Added yesterday
-                            </div>
-                          </div>
-                          <div className="bg-card border border-border p-3 rounded">
-                            <div className="font-medium text-foreground text-sm">
-                              Update team on project timeline
-                            </div>
-                            <div className="text-xs text-muted-foreground mt-1">
-                              Added 3 days ago
+                            <div className="bg-card border border-border p-3 rounded">
+                              <div className="font-medium text-foreground text-sm">
+                                Update team on project timeline
+                              </div>
+                              <div className="text-xs text-muted-foreground mt-1">
+                                Added 3 days ago
+                              </div>
                             </div>
                           </div>
                         </div>
-                        <div className="space-y-2">
+                        <div className="space-y-2 mt-auto">
                           <Button className="w-full bg-yellow-600 hover:bg-yellow-700 text-white text-sm">
                             Add New Note
                           </Button>
