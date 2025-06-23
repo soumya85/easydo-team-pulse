@@ -183,8 +183,8 @@ const Index = () => {
                     </Card>
 
                     {/* Meetings This Week */}
-                    <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800 w-full min-w-0 flex flex-col h-full">
-                      <CardContent className="p-4 md:p-6 w-full flex flex-col flex-grow">
+                    <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800 w-full min-w-0 flex flex-col min-h-[400px]">
+                      <CardContent className="p-4 md:p-6 w-full flex flex-col flex-1">
                         <div className="flex items-center mb-4">
                           <Calendar className="w-4 md:w-5 h-4 md:h-5 text-green-600 mr-2" />
                           <span className="font-medium text-foreground text-sm md:text-base">
