@@ -101,7 +101,7 @@ export function AppHeader() {
             </Button>
           </div>
 
-          <div className="w-8 h-8 rounded-full overflow-hidden border border-slate-200">
+          <div className="w-8 h-8 rounded-full overflow-hidden border border-border">
             <img
               src="/lovable-uploads/9394970e-ec60-4a9a-ba34-feaa274e76f8.png"
               alt="Profile"
