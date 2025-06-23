@@ -107,7 +107,7 @@ export function AppSidebar() {
                 <img
                   src="https://cdn.builder.io/api/v1/assets/62c95941e2ef4fb390e9f53735b0fcbd/image-eef20a?format=webp&width=800"
                   alt="User Icon"
-                  className="w-7 h-7 object-contain"
+                  className="w-9 h-9 object-contain"
                 />
               </div>
               <p className="text-sm text-muted-foreground">
