@@ -138,11 +138,58 @@ export function AppHeader() {
             variant="outline"
             size="sm"
             className="h-8 px-3 flex items-center"
+            onClick={() => setIsFilterDropdownOpen(!isFilterDropdownOpen)}
           >
             <Filter className="w-4 h-4 mr-1" />
             Filter
           </Button>
         </div>
+
+        {/* Filter Dropdown */}
+        {isFilterDropdownOpen && (
+          <>
+            {/* Backdrop */}
+            <div
+              className="fixed inset-0 bg-black bg-opacity-25 z-50"
+              onClick={() => setIsFilterDropdownOpen(false)}
+            />
+
+            {/* Dropdown Content */}
+            <div className="absolute top-full left-4 right-4 mt-1 bg-white border border-slate-200 rounded-lg shadow-lg z-50">
+              <div className="p-4 space-y-4">
+                {/* Company Row */}
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-slate-700">
+                    Company
+                  </span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="h-9 px-3 flex items-center justify-between min-w-[200px]"
+                  >
+                    <span className="text-sm">Liberty Highrise PVT Ltd</span>
+                    <ChevronDown className="w-4 h-4 ml-2" />
+                  </Button>
+                </div>
+
+                {/* Branch Row */}
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-slate-700">
+                    Branch
+                  </span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="h-9 px-3 flex items-center justify-between min-w-[200px]"
+                  >
+                    <span className="text-sm">All Branch</span>
+                    <ChevronDown className="w-4 h-4 ml-2" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </>
   );
