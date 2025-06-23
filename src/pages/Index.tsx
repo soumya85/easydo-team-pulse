@@ -43,10 +43,8 @@ const Index = () => {
                     Here's what's happening with your work today
                   </p>
                 </div>
-              </div>
-            </div>
 
-              {/* Dashboard Content */}
+                {/* Dashboard Content */}
               <div className="mb-6 md:mb-8 w-full">
                 <h2 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4 flex items-center break-words">
                   <div className="w-1 h-5 md:h-6 bg-slate-800 rounded mr-2 md:mr-3 flex-shrink-0"></div>
