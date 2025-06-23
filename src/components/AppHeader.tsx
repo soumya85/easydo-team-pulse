@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import { Bell, Plus, RefreshCw, ChevronDown, Filter } from "lucide-react";
+import { Bell, Plus, Moon, ChevronDown, Filter } from "lucide-react";
+import { useState } from "react";
 
 export function AppHeader() {
+  const [isFilterDropdownOpen, setIsFilterDropdownOpen] = useState(false);
   return (
     <>
       {/* Main Header */}
@@ -13,11 +15,11 @@ export function AppHeader() {
 
           {/* Logo for mobile - shown on small screens */}
           <div className="flex items-center md:hidden flex-shrink-0">
-            <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center">
-              <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-              </div>
-            </div>
+            <img
+              src="https://cdn.builder.io/api/v1/assets/62c95941e2ef4fb390e9f53735b0fcbd/image-9faca0?format=webp&width=800"
+              alt="Logo"
+              className="w-8 h-8 object-contain"
+            />
           </div>
 
           {/* Desktop layout */}
@@ -60,7 +62,7 @@ export function AppHeader() {
           </Button>
 
           <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
-            <RefreshCw className="w-4 h-4" />
+            <Moon className="w-4 h-4" />
           </Button>
 
           <div className="relative">
@@ -136,11 +138,58 @@ export function AppHeader() {
             variant="outline"
             size="sm"
             className="h-8 px-3 flex items-center"
+            onClick={() => setIsFilterDropdownOpen(!isFilterDropdownOpen)}
           >
             <Filter className="w-4 h-4 mr-1" />
             Filter
           </Button>
         </div>
+
+        {/* Filter Dropdown */}
+        {isFilterDropdownOpen && (
+          <>
+            {/* Backdrop */}
+            <div
+              className="fixed inset-0 bg-black bg-opacity-25 z-50"
+              onClick={() => setIsFilterDropdownOpen(false)}
+            />
+
+            {/* Dropdown Content */}
+            <div className="absolute top-full left-4 right-4 mt-1 bg-white border border-slate-200 rounded-lg shadow-lg z-50">
+              <div className="p-4 space-y-4">
+                {/* Company Row */}
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-slate-700">
+                    Company
+                  </span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="h-9 px-3 flex items-center justify-between min-w-[200px]"
+                  >
+                    <span className="text-sm">Liberty Highrise PVT Ltd</span>
+                    <ChevronDown className="w-4 h-4 ml-2" />
+                  </Button>
+                </div>
+
+                {/* Branch Row */}
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-slate-700">
+                    Branch
+                  </span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="h-9 px-3 flex items-center justify-between min-w-[200px]"
+                  >
+                    <span className="text-sm">All Branch</span>
+                    <ChevronDown className="w-4 h-4 ml-2" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </>
   );
