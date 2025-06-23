@@ -262,7 +262,7 @@ const Index = () => {
                   Personal Productivity & Communication
                 </h2>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-6">
                   {/* Recent Chat Activity - 50% width */}
                   <RecentChatActivity />
 
