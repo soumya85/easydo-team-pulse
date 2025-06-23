@@ -286,6 +286,18 @@ const Index = () => {
                         </div>
                       </div>
 
+                      <div className="bg-blue-50 border border-blue-200 rounded p-3 mb-4">
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 text-blue-600 mr-2" />
+                          <span className="text-sm font-medium text-blue-800">
+                            Office Hours
+                          </span>
+                        </div>
+                        <div className="text-sm text-blue-600 mt-1">
+                          09:00 AM To 06:00 PM
+                        </div>
+                      </div>
+
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-sm font-medium">
@@ -302,18 +314,6 @@ const Index = () => {
                         </Button>
                         <div className="text-xs text-center text-slate-500 mt-2">
                           Punch actions are tracked for attendance
-                        </div>
-                      </div>
-
-                      <div className="bg-blue-50 border border-blue-200 rounded p-3 mb-3">
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 text-blue-600 mr-2" />
-                          <span className="text-sm font-medium text-blue-800">
-                            Office Hours
-                          </span>
-                        </div>
-                        <div className="text-sm text-blue-600 mt-1">
-                          09:00 AM To 06:00 PM
                         </div>
                       </div>
 
