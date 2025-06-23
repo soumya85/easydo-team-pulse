@@ -32,10 +32,10 @@ const Index = () => {
 
           {/* Main Dashboard Content */}
           <main className="flex-1 p-3 md:p-6 overflow-auto pt-32 md:pt-22">
-            <div className="max-w-7xl mx-auto w-full">
+            <div className="max-w-7xl mx-auto w-full px-0">
               {/* Welcome Header */}
-              <div className="mb-4 md:mb-6 w-full">
-                <h1 className="text-xl md:text-2xl font-semibold text-slate-900 flex items-center break-words">
+              <div className="mb-4 md:mb-6 w-full pr-2 md:pr-0">
+                <h1 className="text-xl md:text-2xl font-semibold text-slate-900 break-words">
                   Good morning, Bhaskar! 👋
                 </h1>
                 <p className="text-slate-600 mt-1 text-sm md:text-base break-words">
