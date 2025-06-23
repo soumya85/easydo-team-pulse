@@ -59,48 +59,113 @@ const Index = () => {
                             My Tasks at a Glance
                           </span>
                         </div>
-                        <div className="text-center mb-4 md:mb-6">
-                          <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-1">
-                            472
-                          </div>
-                          <div className="text-xs md:text-sm text-muted-foreground">
-                            Total Pending Tasks
-                          </div>
-                        </div>
-                        <div className="grid grid-cols-2 gap-3 md:gap-4 mb-4">
-                          <div className="text-center">
-                            <div className="w-8 h-8 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
-                              <AlertTriangle className="w-4 h-4 text-red-600" />
+
+                        <Tabs defaultValue="my-tasks" className="w-full">
+                          <TabsList className="grid w-full grid-cols-2 mb-4">
+                            <TabsTrigger value="my-tasks" className="text-xs">
+                              My Task
+                            </TabsTrigger>
+                            <TabsTrigger
+                              value="delegated-tasks"
+                              className="text-xs"
+                            >
+                              Delegated Task
+                            </TabsTrigger>
+                          </TabsList>
+
+                          <TabsContent value="my-tasks" className="space-y-4">
+                            <div className="text-center mb-4 md:mb-6">
+                              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-1">
+                                472
+                              </div>
+                              <div className="text-xs md:text-sm text-muted-foreground">
+                                Total Pending Tasks
+                              </div>
                             </div>
-                            <div className="text-lg md:text-xl font-bold text-red-600">
-                              23
+                            <div className="grid grid-cols-2 gap-3 md:gap-4 mb-4">
+                              <div className="text-center">
+                                <div className="w-8 h-8 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
+                                  <AlertTriangle className="w-4 h-4 text-red-600" />
+                                </div>
+                                <div className="text-lg md:text-xl font-bold text-red-600">
+                                  23
+                                </div>
+                                <div className="text-xs text-muted-foreground">
+                                  Overdue
+                                </div>
+                              </div>
+                              <div className="text-center">
+                                <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
+                                  <Clock className="w-4 h-4 text-orange-600" />
+                                </div>
+                                <div className="text-lg md:text-xl font-bold text-orange-600">
+                                  18
+                                </div>
+                                <div className="text-xs text-muted-foreground">
+                                  Due Today
+                                </div>
+                              </div>
                             </div>
-                            <div className="text-xs text-muted-foreground">
-                              Overdue
+                            <div className="mb-4">
+                              <div className="flex justify-between text-xs md:text-sm mb-1 text-foreground">
+                                <span>Weekly Progress</span>
+                                <span className="font-medium">85%</span>
+                              </div>
+                              <Progress value={85} className="h-2" />
                             </div>
-                          </div>
-                          <div className="text-center">
-                            <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
-                              <Clock className="w-4 h-4 text-orange-600" />
+                            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm">
+                              View All My Tasks
+                            </Button>
+                          </TabsContent>
+
+                          <TabsContent
+                            value="delegated-tasks"
+                            className="space-y-4"
+                          >
+                            <div className="text-center mb-4 md:mb-6">
+                              <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-1">
+                                89
+                              </div>
+                              <div className="text-xs md:text-sm text-muted-foreground">
+                                Total Delegated Tasks
+                              </div>
                             </div>
-                            <div className="text-lg md:text-xl font-bold text-orange-600">
-                              18
+                            <div className="grid grid-cols-2 gap-3 md:gap-4 mb-4">
+                              <div className="text-center">
+                                <div className="w-8 h-8 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
+                                  <Clock className="w-4 h-4 text-yellow-600" />
+                                </div>
+                                <div className="text-lg md:text-xl font-bold text-yellow-600">
+                                  12
+                                </div>
+                                <div className="text-xs text-muted-foreground">
+                                  In Progress
+                                </div>
+                              </div>
+                              <div className="text-center">
+                                <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
+                                  <CheckSquare className="w-4 h-4 text-green-600" />
+                                </div>
+                                <div className="text-lg md:text-xl font-bold text-green-600">
+                                  77
+                                </div>
+                                <div className="text-xs text-muted-foreground">
+                                  Completed
+                                </div>
+                              </div>
                             </div>
-                            <div className="text-xs text-muted-foreground">
-                              Due Today
+                            <div className="mb-4">
+                              <div className="flex justify-between text-xs md:text-sm mb-1 text-foreground">
+                                <span>Completion Rate</span>
+                                <span className="font-medium">87%</span>
+                              </div>
+                              <Progress value={87} className="h-2" />
                             </div>
-                          </div>
-                        </div>
-                        <div className="mb-4">
-                          <div className="flex justify-between text-xs md:text-sm mb-1 text-foreground">
-                            <span>Weekly Progress</span>
-                            <span className="font-medium">85%</span>
-                          </div>
-                          <Progress value={85} className="h-2" />
-                        </div>
-                        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm">
-                          View All My Tasks
-                        </Button>
+                            <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white text-sm">
+                              View Delegated Tasks
+                            </Button>
+                          </TabsContent>
+                        </Tabs>
                       </CardContent>
                     </Card>
 
