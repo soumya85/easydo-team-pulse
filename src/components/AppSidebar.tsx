@@ -103,7 +103,9 @@ export function AppSidebar() {
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center space-x-2">
-                <h3 className="font-semibold text-foreground">Bhaskar Ghosh</h3>
+                <h3 className="font-semibold text-foreground text-lg">
+                  Bhaskar Ghosh
+                </h3>
                 <img
                   src="https://cdn.builder.io/api/v1/assets/62c95941e2ef4fb390e9f53735b0fcbd/image-eef20a?format=webp&width=800"
                   alt="User Icon"
