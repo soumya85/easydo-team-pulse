@@ -294,7 +294,7 @@ const Index = () => {
                     </Card>
 
                     {/* Notes & Reminder */}
-                    <Card className="bg-yellow-50 dark:bg-yellow-950/20 border-yellow-200 dark:border-yellow-800 w-full min-w-0 flex flex-col min-h-[400px]">
+                    <Card className="bg-yellow-50 dark:bg-yellow-950/20 border-yellow-200 dark:border-yellow-800 w-full min-w-0 flex flex-col h-[450px]">
                       <CardContent className="p-4 md:p-6 w-full flex flex-col h-full">
                         <div className="flex items-center mb-4">
                           <StickyNote className="w-4 md:w-5 h-4 md:h-5 text-yellow-600 mr-2" />
