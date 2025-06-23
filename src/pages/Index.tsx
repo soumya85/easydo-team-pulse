@@ -31,7 +31,7 @@ const Index = () => {
           <AppHeader />
 
           {/* Main Dashboard Content */}
-          <div className="flex-1 p-6 bg-slate-50 overflow-auto">
+          <main className="flex-1 p-3 md:p-6 overflow-auto">
             <div className="max-w-7xl mx-auto">
               {/* Welcome Header */}
               <div className="mb-6">
@@ -47,28 +47,24 @@ const Index = () => {
               <div className="mb-8">
                 <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center">
                   <div className="w-1 h-6 bg-blue-600 rounded mr-3"></div>
-                  Quick Overview
-                </h2>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {/* My Tasks at a Glance */}
-                  <Card className="bg-blue-50 border-blue-200">
-                    <CardContent className="p-6">
+                  {/* Quick Notes */}
+                  <Card className="bg-yellow-50 border-yellow-200">
+                    <CardContent className="p-4 md:p-6">
                       <div className="flex items-center mb-4">
                         <CheckSquare className="w-5 h-5 text-blue-600 mr-2" />
                         <span className="font-medium text-slate-900">
                           My Tasks at a Glance
                         </span>
                       </div>
-                      <div className="text-center mb-6">
-                        <div className="text-4xl font-bold text-blue-600 mb-1">
+                      <div className="text-center mb-4 md:mb-6">
+                        <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-1">
                           472
                         </div>
-                        <div className="text-sm text-slate-600">
+                        <div className="text-xs md:text-sm text-slate-600">
                           Total Pending Tasks
                         </div>
                       </div>
-                      <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div className="grid grid-cols-2 gap-3 md:gap-4 mb-4">
                         <div className="text-center">
                           <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-1">
                             <AlertTriangle className="w-4 h-4 text-red-600" />
@@ -105,18 +101,18 @@ const Index = () => {
 
                   {/* Meetings This Week */}
                   <Card className="bg-green-50 border-green-200">
-                    <CardContent className="p-6">
+                    <CardContent className="p-4 md:p-6">
                       <div className="flex items-center mb-4">
                         <Calendar className="w-5 h-5 text-green-600 mr-2" />
                         <span className="font-medium text-slate-900">
                           Meetings This Week
                         </span>
                       </div>
-                      <div className="text-center mb-6">
-                        <div className="text-4xl font-bold text-green-600 mb-1">
+                      <div className="text-center mb-4 md:mb-6">
+                        <div className="text-3xl md:text-4xl font-bold text-green-600 mb-1">
                           7
                         </div>
-                        <div className="text-sm text-slate-600">
+                        <div className="text-xs md:text-sm text-slate-600">
                           Scheduled Meetings
                         </div>
                       </div>
@@ -210,7 +206,7 @@ const Index = () => {
 
                   {/* Pending Approvals */}
                   <Card className="bg-red-50 border-red-200">
-                    <CardContent className="p-6">
+                    <CardContent className="p-4 md:p-6">
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center">
                           <AlertTriangle className="w-5 h-5 text-red-600 mr-2" />
@@ -257,19 +253,19 @@ const Index = () => {
               </div>
 
               {/* Mid-Row Section - Recent Chat Activity + Work Status */}
-              <div className="mb-8">
-                <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center">
-                  <div className="w-1 h-6 bg-indigo-600 rounded mr-3"></div>
+              <div className="mb-6 md:mb-8">
+                <h2 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4 flex items-center">
+                  <div className="w-1 h-5 md:h-6 bg-indigo-600 rounded mr-2 md:mr-3"></div>
                   Personal Productivity & Communication
                 </h2>
 
-                <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-6">
+                <div className="grid grid-cols-1 xl:grid-cols-[60%_40%] gap-4 md:gap-6">
                   {/* Recent Chat Activity - 50% width */}
                   <RecentChatActivity />
 
                   {/* My Daily Work Status - 50% width */}
                   <Card>
-                    <CardContent className="p-6">
+                    <CardContent className="p-4 md:p-6">
                       <div className="flex items-center mb-4">
                         <Clock className="w-5 h-5 text-blue-600 mr-2" />
                         <span className="font-medium text-slate-900">
@@ -277,11 +273,11 @@ const Index = () => {
                         </span>
                       </div>
 
-                      <div className="text-center mb-6">
-                        <div className="text-3xl font-bold text-blue-600 mb-2">
+                      <div className="text-center mb-4 md:mb-6">
+                        <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">
                           03:43:14 am IST
                         </div>
-                        <div className="text-sm text-slate-600">
+                        <div className="text-xs md:text-sm text-slate-600">
                           Monday 23 Jun, 2025
                         </div>
                       </div>
@@ -320,30 +316,21 @@ const Index = () => {
                       <div className="bg-orange-50 border border-orange-200 rounded p-3 mb-4">
                         <div className="flex items-start">
                           <div className="flex-shrink-0 w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                            <span className="text-white text-xs font-bold">
-                              !
-                            </span>
+                            <span className="text-white text-xs font-bold">!</span>
                           </div>
                           <div className="flex-1">
                             <div className="text-sm text-orange-800">
-                              <span className="font-medium">
-                                Attendance is locked @11:31 AM.
-                              </span>{" "}
-                              For Punch-in, Click above try request for
-                              Approval, to yr Reporting Manager...
+                              <span className="font-medium">Attendance is locked @11:31 AM.</span> For Punch-in, Click above try request for Approval, to yr Reporting Manager...
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      <div className="border border-slate-200 rounded-lg p-4">
+                      <div className="border border-slate-200 rounded-lg p-3 md:p-4">
                         <div className="mb-3">
-                          <h3 className="text-sm font-semibold text-slate-900">
-                            Location Timeline
-                          </h3>
+                          <h3 className="text-xs md:text-sm font-semibold text-slate-900">Location Timeline</h3>
                           <p className="text-xs text-slate-600">
-                            (Tracked ONLY between Punch-in & Punch-out as per
-                            Mandate of the company)
+                            (Tracked ONLY between Punch-in & Punch-out as per Mandate of the company)
                           </p>
                         </div>
 
@@ -357,16 +344,16 @@ const Index = () => {
               </div>
 
               {/* Information Hub Section */}
-              <div className="mb-8">
-                <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center">
-                  <div className="w-1 h-6 bg-orange-600 rounded mr-3"></div>
+              <div className="mb-6 md:mb-8">
+                <h2 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4 flex items-center">
+                  <div className="w-1 h-5 md:h-6 bg-orange-600 rounded mr-2 md:mr-3"></div>
                   Information Hub
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                   {/* Notice Board */}
                   <Card>
-                    <CardContent className="p-6">
+                    <CardContent className="p-4 md:p-6">
                       <div className="flex items-center mb-4">
                         <Bell className="w-5 h-5 text-orange-600 mr-2" />
                         <span className="font-medium text-slate-900">
@@ -413,7 +400,7 @@ const Index = () => {
 
                   {/* Monthly Attendance Summary */}
                   <Card>
-                    <CardContent className="p-6">
+                    <CardContent className="p-4 md:p-6">
                       <div className="flex items-center mb-4">
                         <Calendar className="w-5 h-5 text-purple-600 mr-2" />
                         <span className="font-medium text-slate-900">
