@@ -17,7 +17,7 @@ export function AppHeader() {
       {/* Main Header */}
       <header className="h-16 border-b border-border bg-background px-3 md:px-6 flex items-center justify-between fixed top-0 left-0 md:left-64 right-0 z-50">
         <div className="flex items-center space-x-2 md:space-x-4 flex-1 min-w-0">
-          <SidebarTrigger className="h-8 w-8 md:hidden flex-shrink-0" />
+          <SidebarTrigger className="h-8 w-8 flex-shrink-0" />
 
           {/* Logo for mobile - shown on small screens */}
           <div className="flex items-center md:hidden flex-shrink-0">
