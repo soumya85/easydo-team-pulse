@@ -262,11 +262,11 @@ const Index = () => {
                   Personal Productivity & Communication
                 </h2>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                  {/* Recent Chat Activity - now spans 2 columns */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  {/* Recent Chat Activity - 50% width */}
                   <RecentChatActivity />
 
-                  {/* My Daily Work Status */}
+                  {/* My Daily Work Status - 50% width */}
                   <Card>
                     <CardContent className="p-6">
                       <div className="flex items-center mb-4">
