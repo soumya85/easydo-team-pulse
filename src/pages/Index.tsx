@@ -39,9 +39,6 @@ const Index = () => {
                   <h1 className="text-xl md:text-2xl font-semibold text-slate-900 break-words">
                     Good morning, Bhaskar! 👋
                   </h1>
-                  <p className="text-slate-600 mt-1 text-sm md:text-base break-words">
-                    Here's what's happening with your work today
-                  </p>
                 </div>
 
                 {/* Dashboard Content */}
