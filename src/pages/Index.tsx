@@ -328,6 +328,81 @@ const Index = () => {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {/* Monthly Attendance Summary */}
+                  <Card>
+                    <CardContent className="p-6">
+                      <div className="flex items-center mb-4">
+                        <Calendar className="w-5 h-5 text-purple-600 mr-2" />
+                        <span className="font-medium text-slate-900">
+                          Monthly Attendance Summary - June 2025
+                        </span>
+                      </div>
+
+                      <div className="text-center mb-4">
+                        <div className="text-sm text-slate-600 mb-2">
+                          Total Days: 30 | Working Days: 22
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div className="text-center p-3 bg-green-50 rounded">
+                          <div className="w-6 h-6 bg-green-500 rounded-full mx-auto mb-1 flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">
+                              18
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-600">Present</div>
+                        </div>
+                        <div className="text-center p-3 bg-red-50 rounded">
+                          <div className="w-6 h-6 bg-red-500 rounded-full mx-auto mb-1 flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">
+                              2
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-600">Absent</div>
+                        </div>
+                        <div className="text-center p-3 bg-blue-50 rounded">
+                          <div className="w-6 h-6 bg-blue-500 rounded-full mx-auto mb-1 flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">
+                              3
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-600">Leave</div>
+                        </div>
+                        <div className="text-center p-3 bg-orange-50 rounded">
+                          <div className="w-6 h-6 bg-orange-500 rounded-full mx-auto mb-1 flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">
+                              5
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-600">Late</div>
+                        </div>
+                        <div className="text-center p-3 bg-yellow-50 rounded">
+                          <div className="w-6 h-6 bg-yellow-500 rounded-full mx-auto mb-1 flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">
+                              1
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-600">Half Day</div>
+                        </div>
+                        <div className="text-center p-3 bg-red-50 rounded">
+                          <div className="w-6 h-6 bg-red-400 rounded-full mx-auto mb-1 flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">
+                              1
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-600">
+                            Red Flags
+                          </div>
+                        </div>
+                      </div>
+
+                      <Button variant="outline" className="w-full">
+                        View Full Attendance
+                      </Button>
+                    </CardContent>
+                  </Card>
+
                   {/* Notice Board */}
                   <Card>
                     <CardContent className="p-6">
