@@ -69,12 +69,12 @@ export function RecentChatActivity() {
   };
 
   return (
-    <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200">
+    <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 border-blue-200 dark:border-blue-800">
       <CardContent className="p-4 md:p-6">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center">
             <MessageSquare className="w-6 h-6 text-blue-600 mr-3" />
-            <span className="font-semibold text-lg text-slate-900">
+            <span className="font-semibold text-lg text-foreground">
               Recent Chat Activity
             </span>
           </div>
@@ -87,7 +87,7 @@ export function RecentChatActivity() {
           <div className="text-4xl font-bold text-blue-600 mb-2">
             {totalUnreadCount}
           </div>
-          <div className="text-base text-slate-600">Unread Messages</div>
+          <div className="text-base text-muted-foreground">Unread Messages</div>
         </div>
 
         <div className="space-y-4 mb-6 max-h-96 overflow-auto">
@@ -95,12 +95,12 @@ export function RecentChatActivity() {
             <div
               key={chat.id}
               onClick={() => handleChatClick(chat.id)}
-              className="flex items-center space-x-4 p-4 bg-white rounded-xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-all cursor-pointer group shadow-sm"
+              className="flex items-center space-x-4 p-4 bg-card rounded-xl border border-border hover:border-blue-200 dark:hover:border-blue-700 hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-all cursor-pointer group shadow-sm"
             >
               <div className="relative">
                 <Avatar className="w-14 h-14">
                   <AvatarImage src={chat.avatar} alt={chat.name} />
-                  <AvatarFallback className="bg-blue-100 text-blue-600 text-lg font-semibold">
+                  <AvatarFallback className="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-lg font-semibold">
                     {chat.name.charAt(0)}
                   </AvatarFallback>
                 </Avatar>
@@ -115,26 +115,26 @@ export function RecentChatActivity() {
 
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between mb-1">
-                  <h4 className="font-semibold text-slate-900 truncate text-base">
+                  <h4 className="font-semibold text-foreground truncate text-base">
                     {chat.name}
                     {chat.isGroup && (
-                      <span className="ml-2 text-sm text-slate-500">
+                      <span className="ml-2 text-sm text-muted-foreground">
                         (Group)
                       </span>
                     )}
                   </h4>
-                  <span className="text-sm text-slate-500 ml-2">
+                  <span className="text-sm text-muted-foreground ml-2">
                     {chat.timestamp}
                   </span>
                 </div>
-                <p className="text-sm text-slate-600 truncate mt-1 leading-relaxed">
+                <p className="text-sm text-muted-foreground truncate mt-1 leading-relaxed">
                   {chat.lastMessage.length > 50
                     ? `${chat.lastMessage.substring(0, 50)}...`
                     : chat.lastMessage}
                 </p>
               </div>
 
-              <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-blue-600 transition-colors" />
+              <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-blue-600 transition-colors" />
             </div>
           ))}
         </div>
@@ -142,7 +142,7 @@ export function RecentChatActivity() {
         <Button
           onClick={handleViewAllChats}
           variant="ghost"
-          className="w-full text-blue-600 hover:bg-blue-100 border border-blue-200 h-12 text-base font-medium"
+          className="w-full text-blue-600 hover:bg-blue-100 dark:hover:bg-blue-950/30 border border-blue-200 dark:border-blue-800 h-12 text-base font-medium"
         >
           <MessageSquare className="w-5 h-5 mr-2" />
           View All Chats
