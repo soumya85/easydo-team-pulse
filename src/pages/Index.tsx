@@ -49,7 +49,7 @@ const Index = () => {
                   Quick Overview
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {/* My Tasks at a Glance */}
                   <Card className="bg-blue-50 border-blue-200">
                     <CardContent className="p-6">
