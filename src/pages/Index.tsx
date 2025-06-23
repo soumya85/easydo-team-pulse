@@ -239,7 +239,7 @@ const Index = () => {
                     </Card>
 
                     {/* Pending Approvals */}
-                    <Card className="bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800 w-full min-w-0 flex flex-col min-h-[400px]">
+                    <Card className="bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800 w-full min-w-0 flex flex-col h-[450px]">
                       <CardContent className="p-4 md:p-6 w-full flex flex-col h-full">
                         <div className="flex items-center mb-4">
                           <AlertTriangle className="w-4 md:w-5 h-4 md:h-5 text-red-600 mr-2" />
