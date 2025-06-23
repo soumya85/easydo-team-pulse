@@ -131,7 +131,7 @@ const Index = () => {
 
                           <TabsContent
                             value="delegated-tasks"
-                            className="flex flex-col flex-1 data-[state=active]:flex"
+                            className="flex flex-col flex-1"
                           >
                             <div className="flex-1">
                               <div className="text-center mb-4 md:mb-6">
