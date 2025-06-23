@@ -19,6 +19,7 @@ import {
   TrendingUp,
   Bell,
   ChevronRight,
+  MapPin,
 } from "lucide-react";
 
 const Index = () => {
