@@ -1,4 +1,3 @@
-
 import {
   Sidebar,
   SidebarContent,
@@ -10,7 +9,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
 } from "@/components/ui/sidebar";
-import { 
+import {
   LayoutGrid,
   MessageSquare,
   Calendar,
@@ -21,7 +20,7 @@ import {
   StickyNote,
   FileText,
   Settings,
-  HelpCircle
+  HelpCircle,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -30,78 +29,90 @@ const menuItems = [
     title: "Overview",
     icon: LayoutGrid,
     url: "/",
-    isActive: true
+    isActive: true,
   },
   {
     title: "Chats",
     icon: MessageSquare,
-    url: "/chats"
+    url: "/chats",
   },
   {
     title: "Today's Schedule",
     icon: Calendar,
-    url: "/schedule"
+    url: "/schedule",
   },
   {
     title: "Employee Dashboard",
     icon: Users,
-    url: "/employee-dashboard"
+    url: "/employee-dashboard",
   },
   {
     title: "Company Dashboard",
     icon: Building2,
-    url: "/company-dashboard"
+    url: "/company-dashboard",
   },
   {
     title: "Tasks",
     icon: CheckSquare,
-    url: "/tasks"
+    url: "/tasks",
   },
   {
     title: "Meet",
     icon: Video,
-    url: "/meet"
+    url: "/meet",
   },
   {
     title: "Notes & Reminder",
     icon: StickyNote,
-    url: "/notes"
+    url: "/notes",
   },
   {
     title: "Reports",
     icon: FileText,
-    url: "/reports"
+    url: "/reports",
   },
   {
     title: "Settings",
     icon: Settings,
-    url: "/settings"
+    url: "/settings",
   },
   {
     title: "Help",
     icon: HelpCircle,
-    url: "/help"
-  }
+    url: "/help",
+  },
 ];
 
 export function AppSidebar() {
   return (
     <Sidebar className="border-r border-slate-200" collapsible="icon">
-      <SidebarHeader className="p-6 border-b border-slate-100">
-        <div className="flex flex-col items-center space-y-4">
-          <img 
-            src="/lovable-uploads/37183cdd-6c21-47a1-acda-93f71a55d7f5.png" 
-            alt="EasyDo" 
-            className="w-20 h-auto group-data-[collapsible=icon]:w-8"
-          />
-          <div className="flex flex-col items-center space-y-2 group-data-[collapsible=icon]:hidden">
-            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-slate-200">
-              <img 
-                src="/lovable-uploads/20890228-6919-4738-a10b-77ad7b06de2e.png"
-                alt="Profile"
-                className="w-full h-full object-cover"
-              />
+      <SidebarHeader className="p-6 border-b border-slate-100 group-data-[collapsible=icon]:p-4 group-data-[collapsible=icon]:border-none">
+        <div className="flex flex-col items-center space-y-4 group-data-[collapsible=icon]:space-y-3">
+          {/* Logo - visible in both modes */}
+          <div className="w-8 h-8 bg-gradient-to-br from-red-500 via-yellow-500 to-green-500 rounded-full flex items-center justify-center group-data-[state=expanded]:w-20 group-data-[state=expanded]:h-auto">
+            <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center group-data-[state=expanded]:hidden">
+              <div className="w-3 h-3 bg-blue-600 rounded-full flex items-center justify-center">
+                <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+              </div>
             </div>
+            <img
+              src="/lovable-uploads/37183cdd-6c21-47a1-acda-93f71a55d7f5.png"
+              alt="EasyDo"
+              className="w-20 h-auto hidden group-data-[state=expanded]:block"
+            />
+          </div>
+
+          {/* Profile section in collapsed mode */}
+          <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-slate-200 group-data-[state=expanded]:w-16 group-data-[state=expanded]:h-16">
+            <img
+              src="/lovable-uploads/20890228-6919-4738-a10b-77ad7b06de2e.png"
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Extended profile info - only in expanded mode */}
+          <div className="flex flex-col items-center space-y-2 group-data-[collapsible=icon]:hidden">
             <div className="text-center">
               <div className="flex items-center space-x-1">
                 <h3 className="font-semibold text-slate-900">Bhaskar Ghosh</h3>
@@ -110,31 +121,36 @@ export function AppSidebar() {
                 </div>
               </div>
               <p className="text-sm text-slate-600">Executive Director</p>
-              <Badge variant="secondary" className="mt-1 bg-blue-100 text-blue-700 hover:bg-blue-100">
+              <Badge
+                variant="secondary"
+                className="mt-1 bg-blue-100 text-blue-700 hover:bg-blue-100"
+              >
                 Authority Level 1
               </Badge>
             </div>
           </div>
         </div>
       </SidebarHeader>
-      
+
       <SidebarContent className="px-3 py-4">
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu className="space-y-1">
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton 
+                  <SidebarMenuButton
                     asChild
                     isActive={item.isActive}
                     className={`h-12 px-4 rounded-lg transition-all duration-200 ${
-                      item.isActive 
-                        ? 'bg-blue-50 text-blue-700 font-medium shadow-sm border border-blue-100' 
-                        : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'
+                      item.isActive
+                        ? "bg-blue-50 text-blue-700 font-medium shadow-sm border border-blue-100"
+                        : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
                     }`}
                   >
                     <a href={item.url} className="flex items-center space-x-3">
-                      <item.icon className={`w-5 h-5 ${item.isActive ? 'text-blue-600' : 'text-slate-500'}`} />
+                      <item.icon
+                        className={`w-5 h-5 ${item.isActive ? "text-blue-600" : "text-slate-500"}`}
+                      />
                       <span className="text-sm font-medium">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
