@@ -50,7 +50,7 @@ const Index = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full">
                     {/* My Tasks at a Glance */}
-                    <Card className="bg-blue-50 border-blue-200 w-full min-w-0">
+                    <Card className="bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800 w-full min-w-0">
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <CheckSquare className="w-4 md:w-5 h-4 md:h-5 text-blue-600 mr-2" />
@@ -62,49 +62,49 @@ const Index = () => {
                           <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-1">
                             472
                           </div>
-                          <div className="text-xs md:text-sm text-slate-600">
+                          <div className="text-xs md:text-sm text-muted-foreground">
                             Total Pending Tasks
                           </div>
                         </div>
                         <div className="grid grid-cols-2 gap-3 md:gap-4 mb-4">
                           <div className="text-center">
-                            <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-1">
+                            <div className="w-8 h-8 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
                               <AlertTriangle className="w-4 h-4 text-red-600" />
                             </div>
                             <div className="text-lg md:text-xl font-bold text-red-600">
                               23
                             </div>
-                            <div className="text-xs text-slate-600">
+                            <div className="text-xs text-muted-foreground">
                               Overdue
                             </div>
                           </div>
                           <div className="text-center">
-                            <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-1">
+                            <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
                               <Clock className="w-4 h-4 text-orange-600" />
                             </div>
                             <div className="text-lg md:text-xl font-bold text-orange-600">
                               18
                             </div>
-                            <div className="text-xs text-slate-600">
+                            <div className="text-xs text-muted-foreground">
                               Due Today
                             </div>
                           </div>
                         </div>
                         <div className="mb-4">
-                          <div className="flex justify-between text-xs md:text-sm mb-1">
+                          <div className="flex justify-between text-xs md:text-sm mb-1 text-foreground">
                             <span>Weekly Progress</span>
                             <span className="font-medium">85%</span>
                           </div>
                           <Progress value={85} className="h-2" />
                         </div>
-                        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-sm">
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm">
                           View All My Tasks
                         </Button>
                       </CardContent>
                     </Card>
 
                     {/* Meetings This Week */}
-                    <Card className="bg-green-50 border-green-200 w-full min-w-0">
+                    <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800 w-full min-w-0">
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <Calendar className="w-4 md:w-5 h-4 md:h-5 text-green-600 mr-2" />
@@ -116,38 +116,38 @@ const Index = () => {
                           <div className="text-3xl md:text-4xl font-bold text-green-600 mb-1">
                             7
                           </div>
-                          <div className="text-xs md:text-sm text-slate-600">
+                          <div className="text-xs md:text-sm text-muted-foreground">
                             Scheduled Meetings
                           </div>
                         </div>
                         <div className="space-y-3 mb-4">
                           <div className="border-l-2 border-green-600 pl-3">
-                            <div className="font-medium text-slate-900 text-sm">
+                            <div className="font-medium text-foreground text-sm">
                               Upcoming
                             </div>
                           </div>
                           <div className="space-y-2">
-                            <div className="bg-white p-3 rounded border">
-                              <div className="font-medium text-slate-900 text-sm">
+                            <div className="bg-card border border-border p-3 rounded">
+                              <div className="font-medium text-foreground text-sm">
                                 Weekly Team Sync
                               </div>
-                              <div className="text-xs text-slate-600 flex items-center mt-1">
+                              <div className="text-xs text-muted-foreground flex items-center mt-1">
                                 <Clock className="w-3 h-3 mr-1" />
                                 Today at 2:00 PM
                               </div>
-                              <div className="text-xs text-slate-500 mt-1">
+                              <div className="text-xs text-muted-foreground mt-1">
                                 5 attendees
                               </div>
                             </div>
-                            <div className="bg-white p-3 rounded border">
-                              <div className="font-medium text-slate-900 text-sm">
+                            <div className="bg-card border border-border p-3 rounded">
+                              <div className="font-medium text-foreground text-sm">
                                 Client Review Meeting
                               </div>
-                              <div className="text-xs text-slate-600 flex items-center mt-1">
+                              <div className="text-xs text-muted-foreground flex items-center mt-1">
                                 <Clock className="w-3 h-3 mr-1" />
                                 Tomorrow at 10:30 AM
                               </div>
-                              <div className="text-xs text-slate-500 mt-1">
+                              <div className="text-xs text-muted-foreground mt-1">
                                 3 attendees
                               </div>
                             </div>
@@ -160,7 +160,7 @@ const Index = () => {
                     </Card>
 
                     {/* Pending Approvals */}
-                    <Card className="bg-red-50 border-red-200 w-full min-w-0">
+                    <Card className="bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800 w-full min-w-0">
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <AlertTriangle className="w-4 md:w-5 h-4 md:h-5 text-red-600 mr-2" />
@@ -172,37 +172,37 @@ const Index = () => {
                           <div className="text-3xl md:text-4xl font-bold text-red-600 mb-1">
                             8
                           </div>
-                          <div className="text-xs md:text-sm text-slate-600">
+                          <div className="text-xs md:text-sm text-muted-foreground">
                             Items Awaiting Your Approval
                           </div>
                         </div>
                         <div className="space-y-3 mb-4">
-                          <div className="bg-white p-3 rounded border border-red-200">
+                          <div className="bg-card border border-border p-3 rounded">
                             <div className="flex items-center justify-between">
                               <div>
-                                <div className="font-medium text-slate-900 text-sm">
+                                <div className="font-medium text-foreground text-sm">
                                   Leave Request - John Doe
                                 </div>
-                                <div className="text-xs text-slate-500 mt-1">
+                                <div className="text-xs text-muted-foreground mt-1">
                                   Submitted 2 days ago
                                 </div>
                               </div>
-                              <Badge className="bg-red-100 text-red-800 border-red-200 text-xs">
+                              <Badge className="bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-400 border-red-200 dark:border-red-800 text-xs">
                                 Urgent
                               </Badge>
                             </div>
                           </div>
-                          <div className="bg-white p-3 rounded border border-red-200">
+                          <div className="bg-card border border-border p-3 rounded">
                             <div className="flex items-center justify-between">
                               <div>
-                                <div className="font-medium text-slate-900 text-sm">
+                                <div className="font-medium text-foreground text-sm">
                                   Expense Report - Marketing
                                 </div>
-                                <div className="text-xs text-slate-500 mt-1">
+                                <div className="text-xs text-muted-foreground mt-1">
                                   Submitted 1 day ago
                                 </div>
                               </div>
-                              <Badge className="bg-orange-100 text-orange-800 border-orange-200 text-xs">
+                              <Badge className="bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-400 border-orange-200 dark:border-orange-800 text-xs">
                                 Review
                               </Badge>
                             </div>
@@ -215,7 +215,7 @@ const Index = () => {
                     </Card>
 
                     {/* Quick Notes */}
-                    <Card className="bg-yellow-50 border-yellow-200 w-full min-w-0">
+                    <Card className="bg-yellow-50 dark:bg-yellow-950/20 border-yellow-200 dark:border-yellow-800 w-full min-w-0">
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <StickyNote className="w-4 md:w-5 h-4 md:h-5 text-yellow-600 mr-2" />
@@ -224,27 +224,27 @@ const Index = () => {
                           </span>
                         </div>
                         <div className="space-y-3 mb-4">
-                          <div className="bg-white p-3 rounded border border-yellow-200">
-                            <div className="font-medium text-slate-900 text-sm">
+                          <div className="bg-card border border-border p-3 rounded">
+                            <div className="font-medium text-foreground text-sm">
                               Follow up on client proposal
                             </div>
-                            <div className="text-xs text-slate-500 mt-1">
+                            <div className="text-xs text-muted-foreground mt-1">
                               Added 2 hours ago
                             </div>
                           </div>
-                          <div className="bg-white p-3 rounded border border-yellow-200">
-                            <div className="font-medium text-slate-900 text-sm">
+                          <div className="bg-card border border-border p-3 rounded">
+                            <div className="font-medium text-foreground text-sm">
                               Review Q4 budget allocation
                             </div>
-                            <div className="text-xs text-slate-500 mt-1">
+                            <div className="text-xs text-muted-foreground mt-1">
                               Added yesterday
                             </div>
                           </div>
-                          <div className="bg-white p-3 rounded border border-yellow-200">
-                            <div className="font-medium text-slate-900 text-sm">
+                          <div className="bg-card border border-border p-3 rounded">
+                            <div className="font-medium text-foreground text-sm">
                               Update team on project timeline
                             </div>
-                            <div className="text-xs text-slate-500 mt-1">
+                            <div className="text-xs text-muted-foreground mt-1">
                               Added 3 days ago
                             </div>
                           </div>
