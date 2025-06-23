@@ -25,35 +25,35 @@ import {
 const Index = () => {
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full">
+      <div className="min-h-screen flex w-full overflow-hidden">
         <AppSidebar />
-        <SidebarInset className="flex-1">
+        <SidebarInset className="flex-1 min-w-0">
           <AppHeader />
 
           {/* Main Dashboard Content */}
           <main className="flex-1 p-3 md:p-6 overflow-auto">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto w-full">
               {/* Welcome Header */}
-              <div className="mb-4 md:mb-6">
-                <h1 className="text-xl md:text-2xl font-semibold text-slate-900 flex items-center">
+              <div className="mb-4 md:mb-6 w-full">
+                <h1 className="text-xl md:text-2xl font-semibold text-slate-900 flex items-center break-words">
                   Good morning, Bhaskar! 👋
                 </h1>
-                <p className="text-slate-600 mt-1 text-sm md:text-base">
+                <p className="text-slate-600 mt-1 text-sm md:text-base break-words">
                   Here's what's happening with your work today
                 </p>
               </div>
 
               {/* Dashboard Content */}
-              <div className="mb-6 md:mb-8">
-                <h2 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4 flex items-center">
-                  <div className="w-1 h-5 md:h-6 bg-slate-800 rounded mr-2 md:mr-3"></div>
+              <div className="mb-6 md:mb-8 w-full">
+                <h2 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4 flex items-center break-words">
+                  <div className="w-1 h-5 md:h-6 bg-slate-800 rounded mr-2 md:mr-3 flex-shrink-0"></div>
                   Quick Overview
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full">
                   {/* My Tasks at a Glance */}
-                  <Card className="bg-blue-50 border-blue-200">
-                    <CardContent className="p-4 md:p-6">
+                  <Card className="bg-blue-50 border-blue-200 w-full min-w-0">
+                    <CardContent className="p-4 md:p-6 w-full">
                       <div className="flex items-center mb-4">
                         <CheckSquare className="w-4 md:w-5 h-4 md:h-5 text-blue-600 mr-2" />
                         <span className="font-medium text-slate-900 text-sm md:text-base">
@@ -104,8 +104,8 @@ const Index = () => {
                   </Card>
 
                   {/* Meetings This Week */}
-                  <Card className="bg-green-50 border-green-200">
-                    <CardContent className="p-4 md:p-6">
+                  <Card className="bg-green-50 border-green-200 w-full min-w-0">
+                    <CardContent className="p-4 md:p-6 w-full">
                       <div className="flex items-center mb-4">
                         <Calendar className="w-4 md:w-5 h-4 md:h-5 text-green-600 mr-2" />
                         <span className="font-medium text-slate-900 text-sm md:text-base">
@@ -160,8 +160,8 @@ const Index = () => {
                   </Card>
 
                   {/* Quick Notes */}
-                  <Card className="bg-yellow-50 border-yellow-200">
-                    <CardContent className="p-4 md:p-6">
+                  <Card className="bg-yellow-50 border-yellow-200 w-full min-w-0">
+                    <CardContent className="p-4 md:p-6 w-full">
                       <div className="flex items-center mb-4">
                         <StickyNote className="w-4 md:w-5 h-4 md:h-5 text-yellow-600 mr-2" />
                         <span className="font-medium text-slate-900 text-sm md:text-base">
@@ -209,8 +209,8 @@ const Index = () => {
                   </Card>
 
                   {/* Pending Approvals */}
-                  <Card className="bg-red-50 border-red-200">
-                    <CardContent className="p-4 md:p-6">
+                  <Card className="bg-red-50 border-red-200 w-full min-w-0">
+                    <CardContent className="p-4 md:p-6 w-full">
                       <div className="flex items-center mb-4">
                         <AlertTriangle className="w-4 md:w-5 h-4 md:h-5 text-red-600 mr-2" />
                         <span className="font-medium text-slate-900 text-sm md:text-base">
@@ -266,19 +266,19 @@ const Index = () => {
               </div>
 
               {/* Mid-Row Section - Recent Chat Activity + Work Status */}
-              <div className="mb-6 md:mb-8">
-                <h2 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4 flex items-center">
-                  <div className="w-1 h-5 md:h-6 bg-indigo-600 rounded mr-2 md:mr-3"></div>
+              <div className="mb-6 md:mb-8 w-full">
+                <h2 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4 flex items-center break-words">
+                  <div className="w-1 h-5 md:h-6 bg-indigo-600 rounded mr-2 md:mr-3 flex-shrink-0"></div>
                   Personal Productivity & Communication
                 </h2>
 
-                <div className="grid grid-cols-1 xl:grid-cols-[60%_40%] gap-4 md:gap-6">
+                <div className="grid grid-cols-1 xl:grid-cols-[60%_40%] gap-4 md:gap-6 w-full">
                   {/* Recent Chat Activity - 60% width */}
                   <RecentChatActivity />
 
                   {/* My Daily Work Status - 40% width */}
-                  <Card>
-                    <CardContent className="p-4 md:p-6">
+                  <Card className="w-full min-w-0">
+                    <CardContent className="p-4 md:p-6 w-full">
                       <div className="flex items-center mb-4">
                         <Clock className="w-4 md:w-5 h-4 md:h-5 text-blue-600 mr-2" />
                         <span className="font-medium text-slate-900 text-sm md:text-base">
@@ -366,16 +366,16 @@ const Index = () => {
               </div>
 
               {/* Information Hub Section */}
-              <div className="mb-6 md:mb-8">
-                <h2 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4 flex items-center">
-                  <div className="w-1 h-5 md:h-6 bg-orange-600 rounded mr-2 md:mr-3"></div>
+              <div className="mb-6 md:mb-8 w-full">
+                <h2 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4 flex items-center break-words">
+                  <div className="w-1 h-5 md:h-6 bg-orange-600 rounded mr-2 md:mr-3 flex-shrink-0"></div>
                   Information Hub
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full">
                   {/* Notice Board */}
-                  <Card>
-                    <CardContent className="p-4 md:p-6">
+                  <Card className="w-full min-w-0">
+                    <CardContent className="p-4 md:p-6 w-full">
                       <div className="flex items-center mb-4">
                         <Bell className="w-4 md:w-5 h-4 md:h-5 text-orange-600 mr-2" />
                         <span className="font-medium text-slate-900 text-sm md:text-base">
@@ -421,8 +421,8 @@ const Index = () => {
                   </Card>
 
                   {/* Monthly Attendance Summary */}
-                  <Card>
-                    <CardContent className="p-4 md:p-6">
+                  <Card className="w-full min-w-0">
+                    <CardContent className="p-4 md:p-6 w-full">
                       <div className="flex items-center mb-4">
                         <Calendar className="w-4 md:w-5 h-4 md:h-5 text-purple-600 mr-2" />
                         <span className="font-medium text-slate-900 text-sm md:text-base">
@@ -481,8 +481,8 @@ const Index = () => {
                   </Card>
 
                   {/* Company Performance */}
-                  <Card>
-                    <CardContent className="p-4 md:p-6">
+                  <Card className="w-full min-w-0">
+                    <CardContent className="p-4 md:p-6 w-full">
                       <div className="flex items-center mb-4">
                         <TrendingUp className="w-4 md:w-5 h-4 md:h-5 text-indigo-600 mr-2" />
                         <span className="font-medium text-slate-900 text-sm md:text-base">
@@ -550,8 +550,8 @@ const Index = () => {
                   </Card>
 
                   {/* Quick Access Links */}
-                  <Card>
-                    <CardContent className="p-4 md:p-6">
+                  <Card className="w-full min-w-0">
+                    <CardContent className="p-4 md:p-6 w-full">
                       <div className="flex items-center mb-4">
                         <StickyNote className="w-4 md:w-5 h-4 md:h-5 text-slate-600 mr-2" />
                         <span className="font-medium text-slate-900 text-sm md:text-base">
