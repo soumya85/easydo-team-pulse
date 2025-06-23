@@ -54,7 +54,7 @@ const Index = () => {
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <CheckSquare className="w-4 md:w-5 h-4 md:h-5 text-blue-600 mr-2" />
-                          <span className="font-medium text-slate-900 text-sm md:text-base">
+                          <span className="font-medium text-foreground text-sm md:text-base">
                             My Tasks at a Glance
                           </span>
                         </div>
@@ -108,7 +108,7 @@ const Index = () => {
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <Calendar className="w-4 md:w-5 h-4 md:h-5 text-green-600 mr-2" />
-                          <span className="font-medium text-slate-900 text-sm md:text-base">
+                          <span className="font-medium text-foreground text-sm md:text-base">
                             Meetings This Week
                           </span>
                         </div>
@@ -164,7 +164,7 @@ const Index = () => {
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <AlertTriangle className="w-4 md:w-5 h-4 md:h-5 text-red-600 mr-2" />
-                          <span className="font-medium text-slate-900 text-sm md:text-base">
+                          <span className="font-medium text-foreground text-sm md:text-base">
                             Pending Approvals
                           </span>
                         </div>
@@ -219,7 +219,7 @@ const Index = () => {
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <StickyNote className="w-4 md:w-5 h-4 md:h-5 text-yellow-600 mr-2" />
-                          <span className="font-medium text-slate-900 text-sm md:text-base">
+                          <span className="font-medium text-foreground text-sm md:text-base">
                             Quick Notes
                           </span>
                         </div>
@@ -281,7 +281,7 @@ const Index = () => {
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <Clock className="w-4 md:w-5 h-4 md:h-5 text-blue-600 mr-2" />
-                          <span className="font-medium text-slate-900 text-sm md:text-base">
+                          <span className="font-medium text-foreground text-sm md:text-base">
                             My Daily Work Status
                           </span>
                         </div>
