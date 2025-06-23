@@ -109,16 +109,62 @@ const Index = () => {
                         <Calendar className="w-5 h-5 text-green-600 mr-2" />
                         <span className="font-medium text-slate-900">
                           Meetings This Week
-                        </span>
+                      <Button
+                        variant="ghost"
+                        className="w-full text-yellow-600 hover:bg-yellow-100"
+                      >
+                        View Performance Details
+                      </Button>
+                    </CardContent>
+                  </Card>
+
+                  {/* Pending Approvals */}
+                  <Card className="bg-red-50 border-red-200">
+                    <CardContent className="p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center">
+                          <AlertTriangle className="w-5 h-5 text-red-600 mr-2" />
+                          <span className="font-medium text-slate-900">
+                            Pending Approvals
+                          </span>
+                        </div>
+                        <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                          <AlertTriangle className="w-4 h-4 text-red-600" />
+                        </div>
                       </div>
-                      <div className="text-center mb-6">
-                        <div className="text-4xl font-bold text-green-600 mb-1">
-                          7
+                      <div className="text-center mb-4">
+                        <div className="text-2xl font-bold text-red-600 mb-1">
+                          10
                         </div>
                         <div className="text-sm text-slate-600">
-                          Scheduled Meetings
+                          Total Pending Approvals
                         </div>
                       </div>
+                      <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
+                        <div className="bg-white p-2 rounded text-center">
+                          <div className="text-blue-600 font-bold">3</div>
+                          <div className="text-slate-600">Leave Requests</div>
+                        </div>
+                        <div className="bg-white p-2 rounded text-center">
+                          <div className="text-orange-600 font-bold">2</div>
+                          <div className="text-slate-600">OT Requests</div>
+                        </div>
+                        <div className="bg-white p-2 rounded text-center">
+                          <div className="text-green-600 font-bold">1</div>
+                          <div className="text-slate-600">Salary Advance</div>
+                        </div>
+                        <div className="bg-white p-2 rounded text-center">
+                          <div className="text-purple-600 font-bold">4</div>
+                          <div className="text-slate-600">Reimbursements</div>
+                        </div>
+                      </div>
+                      <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
+                        Review Approvals
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
                       <div className="space-y-3 mb-4">
                         <div className="border-l-2 border-green-600 pl-3">
                           <div className="font-medium text-slate-900">
@@ -206,6 +252,8 @@ const Index = () => {
                       </div>
                     </CardContent>
                   </Card>
+
+
                 </div>
               </div>
 
@@ -271,6 +319,8 @@ const Index = () => {
                       </div>
                     </CardContent>
                   </Card>
+
+
                 </div>
               </div>
 
