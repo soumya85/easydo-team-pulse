@@ -50,13 +50,13 @@ const Index = () => {
                   </h2>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full">
-                    {/* My Tasks at a Glance */}
+                    {/* Task at a Glance */}
                     <Card className="bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800 w-full min-w-0">
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <CheckSquare className="w-4 md:w-5 h-4 md:h-5 text-blue-600 mr-2" />
                           <span className="font-medium text-foreground text-sm md:text-base">
-                            My Tasks at a Glance
+                            Task at a Glance
                           </span>
                         </div>
 
