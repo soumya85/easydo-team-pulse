@@ -305,18 +305,6 @@ const Index = () => {
                         </div>
                       </div>
 
-                      <div className="bg-blue-50 border border-blue-200 rounded p-3 mb-3">
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 text-blue-600 mr-2" />
-                          <span className="text-sm font-medium text-blue-800">
-                            Office Hours
-                          </span>
-                        </div>
-                        <div className="text-sm text-blue-600 mt-1">
-                          09:00 AM To 06:00 PM
-                        </div>
-                      </div>
-
                       <div className="bg-orange-50 border border-orange-200 rounded p-3 mb-4">
                         <div className="flex items-start">
                           <div className="flex-shrink-0 w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center mr-3 mt-0.5">
@@ -333,6 +321,18 @@ const Index = () => {
                               Approval, to yr Reporting Manager...
                             </div>
                           </div>
+                        </div>
+                      </div>
+
+                      <div className="bg-blue-50 border border-blue-200 rounded p-3 mb-3">
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 text-blue-600 mr-2" />
+                          <span className="text-sm font-medium text-blue-800">
+                            Office Hours
+                          </span>
+                        </div>
+                        <div className="text-sm text-blue-600 mt-1">
+                          09:00 AM To 06:00 PM
                         </div>
                       </div>
 
