@@ -316,7 +316,7 @@ const Index = () => {
                         </div>
                       </div>
 
-                      <div className="bg-orange-50 border border-orange-200 rounded p-3">
+                      <div className="bg-orange-50 border border-orange-200 rounded p-3 mb-4">
                         <div className="flex items-start">
                           <div className="flex-shrink-0 w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center mr-3 mt-0.5">
                             <span className="text-white text-xs font-bold">
@@ -333,6 +333,96 @@ const Index = () => {
                             </div>
                           </div>
                         </div>
+                      </div>
+
+                      <div className="border border-slate-200 rounded-lg p-4">
+                        <div className="mb-3">
+                          <h3 className="text-sm font-semibold text-slate-900">
+                            Location Timeline
+                          </h3>
+                          <p className="text-xs text-slate-600">
+                            (Tracked ONLY between Punch-in & Punch-out as per
+                            Mandate of the company)
+                          </p>
+                        </div>
+
+                        {/* Map Section */}
+                        <div className="mb-4">
+                          <div className="bg-gray-600 text-white text-xs text-center py-1 rounded-t">
+                            Tap on map to swipe and zoom
+                          </div>
+                          <div className="relative bg-slate-100 border border-slate-200 rounded-b h-40 overflow-hidden">
+                            {/* Mock map interface */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-green-100">
+                              {/* Map streets simulation */}
+                              <div className="absolute top-4 left-4 right-4 h-0.5 bg-gray-300 transform rotate-12"></div>
+                              <div className="absolute top-8 left-6 right-2 h-0.5 bg-gray-300 transform -rotate-6"></div>
+                              <div className="absolute top-12 left-2 right-6 h-0.5 bg-gray-300 transform rotate-3"></div>
+
+                              {/* Location pin */}
+                              <div className="absolute top-16 left-1/2 transform -translate-x-1/2">
+                                <div className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg">
+                                  <MapPin className="w-4 h-4" />
+                                </div>
+                                <div className="bg-white border border-gray-200 rounded px-2 py-1 text-xs text-center mt-1 shadow-sm">
+                                  10:55 AM @ Branch
+                                </div>
+                              </div>
+
+                              {/* Street labels */}
+                              <div className="absolute top-2 right-4 text-xs text-gray-600 transform rotate-12">
+                                Idas Patitucci Ln
+                              </div>
+                              <div className="absolute bottom-8 left-4 text-xs text-gray-600">
+                                Police Station Rd
+                              </div>
+                              <div className="absolute top-6 right-8 text-xs text-gray-600 transform -rotate-45">
+                                Satyendranath Ma
+                              </div>
+
+                              {/* Google logo */}
+                              <div className="absolute bottom-2 left-2 text-xs text-gray-500">
+                                Google
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Statistics Section */}
+                        <div className="space-y-3">
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm text-slate-700">
+                              Total time in Verified Location
+                              (Office/Site/Home):
+                            </span>
+                            <span className="text-sm font-medium text-slate-900">
+                              1 Hr 18 Min
+                            </span>
+                          </div>
+
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm text-slate-700">
+                              Total distance commuted:
+                            </span>
+                            <span className="text-sm font-medium text-slate-900">
+                              --
+                            </span>
+                          </div>
+
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm text-slate-700">
+                              Total time in commute:
+                            </span>
+                            <span className="text-sm font-medium text-slate-900">
+                              0 Hr 00 Min
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* More Details Button */}
+                        <Button className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white">
+                          Click here for more Detail
+                        </Button>
                       </div>
                     </CardContent>
                   </Card>
