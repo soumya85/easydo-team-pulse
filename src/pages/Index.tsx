@@ -241,55 +241,57 @@ const Index = () => {
                     </Card>
 
                     {/* Pending Approvals */}
-                    <Card className="bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800 w-full min-w-0">
-                      <CardContent className="p-4 md:p-6 w-full">
+                    <Card className="bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800 w-full min-w-0 flex flex-col h-full">
+                      <CardContent className="p-4 md:p-6 w-full flex flex-col flex-grow">
                         <div className="flex items-center mb-4">
                           <AlertTriangle className="w-4 md:w-5 h-4 md:h-5 text-red-600 mr-2" />
                           <span className="font-medium text-foreground text-sm md:text-base">
                             Pending Approvals
                           </span>
                         </div>
-                        <div className="text-center mb-4 md:mb-6">
-                          <div className="text-3xl md:text-4xl font-bold text-red-600 mb-1">
-                            8
-                          </div>
-                          <div className="text-xs md:text-sm text-muted-foreground">
-                            Items Awaiting Your Approval
-                          </div>
-                        </div>
-                        <div className="space-y-3 mb-4">
-                          <div className="bg-card border border-border p-3 rounded">
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <div className="font-medium text-foreground text-sm">
-                                  Leave Request - John Doe
-                                </div>
-                                <div className="text-xs text-muted-foreground mt-1">
-                                  Submitted 2 days ago
-                                </div>
-                              </div>
-                              <Badge className="bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-400 border-red-200 dark:border-red-800 text-xs">
-                                Urgent
-                              </Badge>
+                        <div className="flex-grow">
+                          <div className="text-center mb-4 md:mb-6">
+                            <div className="text-3xl md:text-4xl font-bold text-red-600 mb-1">
+                              8
+                            </div>
+                            <div className="text-xs md:text-sm text-muted-foreground">
+                              Items Awaiting Your Approval
                             </div>
                           </div>
-                          <div className="bg-card border border-border p-3 rounded">
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <div className="font-medium text-foreground text-sm">
-                                  Expense Report - Marketing
+                          <div className="space-y-3 mb-4">
+                            <div className="bg-card border border-border p-3 rounded">
+                              <div className="flex items-center justify-between">
+                                <div>
+                                  <div className="font-medium text-foreground text-sm">
+                                    Leave Request - John Doe
+                                  </div>
+                                  <div className="text-xs text-muted-foreground mt-1">
+                                    Submitted 2 days ago
+                                  </div>
                                 </div>
-                                <div className="text-xs text-muted-foreground mt-1">
-                                  Submitted 1 day ago
-                                </div>
+                                <Badge className="bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-400 border-red-200 dark:border-red-800 text-xs">
+                                  Urgent
+                                </Badge>
                               </div>
-                              <Badge className="bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-400 border-orange-200 dark:border-orange-800 text-xs">
-                                Review
-                              </Badge>
+                            </div>
+                            <div className="bg-card border border-border p-3 rounded">
+                              <div className="flex items-center justify-between">
+                                <div>
+                                  <div className="font-medium text-foreground text-sm">
+                                    Expense Report - Marketing
+                                  </div>
+                                  <div className="text-xs text-muted-foreground mt-1">
+                                    Submitted 1 day ago
+                                  </div>
+                                </div>
+                                <Badge className="bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-400 border-orange-200 dark:border-orange-800 text-xs">
+                                  Review
+                                </Badge>
+                              </div>
                             </div>
                           </div>
                         </div>
-                        <Button className="w-full bg-red-600 hover:bg-red-700 text-white text-sm">
+                        <Button className="w-full bg-red-600 hover:bg-red-700 text-white text-sm mt-auto">
                           Review Approvals
                         </Button>
                       </CardContent>
