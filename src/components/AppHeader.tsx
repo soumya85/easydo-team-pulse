@@ -5,7 +5,7 @@ import { Bell, Plus, RefreshCw, ChevronDown } from "lucide-react";
 
 export function AppHeader() {
   return (
-    <header className="h-16 border-b border-slate-200 bg-white px-6 flex items-center justify-between fixed top-0 left-64 right-0 z-50">
+    <header className="h-16 border-b border-slate-200 bg-white px-6 flex items-center justify-between fixed top-0 left-0 md:left-64 right-0 z-50">
       <div className="flex items-center space-x-4">
         <SidebarTrigger className="h-8 w-8" />
         <div className="flex items-center space-x-6">
