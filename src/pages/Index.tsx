@@ -25,7 +25,7 @@ import {
 const Index = () => {
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full overflow-hidden">
+      <div className="min-h-screen flex w-full overflow-hidden bg-background">
         <AppSidebar />
         <SidebarInset className="flex-1 min-w-0 w-full">
           <AppHeader />
@@ -36,15 +36,15 @@ const Index = () => {
               <div className="max-w-7xl mx-auto w-full">
                 {/* Welcome Header */}
                 <div className="mb-4 md:mb-6 w-full">
-                  <h1 className="text-xl md:text-2xl font-semibold text-slate-900 break-words">
+                  <h1 className="text-xl md:text-2xl font-semibold text-foreground break-words">
                     Good morning, Bhaskar! 👋
                   </h1>
                 </div>
 
                 {/* Dashboard Content */}
                 <div className="mb-6 md:mb-8 w-full">
-                  <h2 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4 flex items-center break-words">
-                    <div className="w-1 h-5 md:h-6 bg-slate-800 rounded mr-2 md:mr-3 flex-shrink-0"></div>
+                  <h2 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4 flex items-center break-words">
+                    <div className="w-1 h-5 md:h-6 bg-foreground rounded mr-2 md:mr-3 flex-shrink-0"></div>
                     Quick Overview
                   </h2>
 
@@ -267,7 +267,7 @@ const Index = () => {
 
                 {/* Mid-Row Section - Recent Chat Activity + Work Status */}
                 <div className="mb-6 md:mb-8 w-full">
-                  <h2 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4 flex items-center break-words">
+                  <h2 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4 flex items-center break-words">
                     <div className="w-1 h-5 md:h-6 bg-indigo-600 rounded mr-2 md:mr-3 flex-shrink-0"></div>
                     Personal Productivity & Communication
                   </h2>
@@ -367,7 +367,7 @@ const Index = () => {
 
                 {/* Information Hub Section */}
                 <div className="mb-6 md:mb-8 w-full">
-                  <h2 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4 flex items-center break-words">
+                  <h2 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4 flex items-center break-words">
                     <div className="w-1 h-5 md:h-6 bg-orange-600 rounded mr-2 md:mr-3 flex-shrink-0"></div>
                     Information Hub
                   </h2>
