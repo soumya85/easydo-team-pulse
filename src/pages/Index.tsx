@@ -184,57 +184,55 @@ const Index = () => {
 
                     {/* Meetings This Week */}
                     <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800 w-full min-w-0 flex flex-col min-h-[400px]">
-                      <CardContent className="p-4 md:p-6 w-full flex flex-col flex-1">
+                      <CardContent className="p-4 md:p-6 w-full flex flex-col h-full">
                         <div className="flex items-center mb-4">
                           <Calendar className="w-4 md:w-5 h-4 md:h-5 text-green-600 mr-2" />
                           <span className="font-medium text-foreground text-sm md:text-base">
                             Meetings This Week
                           </span>
                         </div>
-                        <div className="flex-grow">
-                          <div className="text-center mb-4 md:mb-6">
-                            <div className="text-3xl md:text-4xl font-bold text-green-600 mb-1">
-                              7
-                            </div>
-                            <div className="text-xs md:text-sm text-muted-foreground">
-                              Scheduled Meetings
+                        <div className="text-center mb-4 md:mb-6">
+                          <div className="text-3xl md:text-4xl font-bold text-green-600 mb-1">
+                            7
+                          </div>
+                          <div className="text-xs md:text-sm text-muted-foreground">
+                            Scheduled Meetings
+                          </div>
+                        </div>
+                        <div className="space-y-3 mb-4 flex-grow">
+                          <div className="border-l-2 border-green-600 pl-3">
+                            <div className="font-medium text-foreground text-sm">
+                              Upcoming
                             </div>
                           </div>
-                          <div className="space-y-3 mb-4">
-                            <div className="border-l-2 border-green-600 pl-3">
+                          <div className="space-y-2">
+                            <div className="bg-card border border-border p-3 rounded">
                               <div className="font-medium text-foreground text-sm">
-                                Upcoming
+                                Weekly Team Sync
+                              </div>
+                              <div className="text-xs text-muted-foreground flex items-center mt-1">
+                                <Clock className="w-3 h-3 mr-1" />
+                                Today at 2:00 PM
+                              </div>
+                              <div className="text-xs text-muted-foreground mt-1">
+                                5 attendees
                               </div>
                             </div>
-                            <div className="space-y-2">
-                              <div className="bg-card border border-border p-3 rounded">
-                                <div className="font-medium text-foreground text-sm">
-                                  Weekly Team Sync
-                                </div>
-                                <div className="text-xs text-muted-foreground flex items-center mt-1">
-                                  <Clock className="w-3 h-3 mr-1" />
-                                  Today at 2:00 PM
-                                </div>
-                                <div className="text-xs text-muted-foreground mt-1">
-                                  5 attendees
-                                </div>
+                            <div className="bg-card border border-border p-3 rounded">
+                              <div className="font-medium text-foreground text-sm">
+                                Client Review Meeting
                               </div>
-                              <div className="bg-card border border-border p-3 rounded">
-                                <div className="font-medium text-foreground text-sm">
-                                  Client Review Meeting
-                                </div>
-                                <div className="text-xs text-muted-foreground flex items-center mt-1">
-                                  <Clock className="w-3 h-3 mr-1" />
-                                  Tomorrow at 10:30 AM
-                                </div>
-                                <div className="text-xs text-muted-foreground mt-1">
-                                  3 attendees
-                                </div>
+                              <div className="text-xs text-muted-foreground flex items-center mt-1">
+                                <Clock className="w-3 h-3 mr-1" />
+                                Tomorrow at 10:30 AM
+                              </div>
+                              <div className="text-xs text-muted-foreground mt-1">
+                                3 attendees
                               </div>
                             </div>
                           </div>
                         </div>
-                        <Button className="w-full bg-green-600 hover:bg-green-700 text-white text-sm mt-auto">
+                        <Button className="w-full bg-green-600 hover:bg-green-700 text-white text-sm">
                           View All Meetings
                         </Button>
                       </CardContent>
