@@ -436,38 +436,62 @@ const Index = () => {
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-2 gap-3 md:gap-4 mb-4">
-                        <div className="text-center p-3 bg-green-50 rounded">
-                          <div className="w-6 h-6 bg-green-500 rounded-full mx-auto mb-1 flex items-center justify-center">
+                      <div className="grid grid-cols-2 gap-2 md:gap-3 mb-4">
+                        <div className="text-center p-2 bg-green-50 rounded">
+                          <div className="w-5 h-5 bg-green-500 rounded-full mx-auto mb-1 flex items-center justify-center">
                             <span className="text-white text-xs font-bold">
                               18
                             </span>
                           </div>
                           <div className="text-xs text-slate-600">Present</div>
                         </div>
-                        <div className="text-center p-3 bg-red-50 rounded">
-                          <div className="w-6 h-6 bg-red-500 rounded-full mx-auto mb-1 flex items-center justify-center">
+                        <div className="text-center p-2 bg-red-50 rounded">
+                          <div className="w-5 h-5 bg-red-500 rounded-full mx-auto mb-1 flex items-center justify-center">
                             <span className="text-white text-xs font-bold">
                               2
                             </span>
                           </div>
                           <div className="text-xs text-slate-600">Absent</div>
                         </div>
-                        <div className="text-center p-3 bg-blue-50 rounded">
-                          <div className="w-6 h-6 bg-blue-500 rounded-full mx-auto mb-1 flex items-center justify-center">
+                        <div className="text-center p-2 bg-blue-50 rounded">
+                          <div className="w-5 h-5 bg-blue-500 rounded-full mx-auto mb-1 flex items-center justify-center">
                             <span className="text-white text-xs font-bold">
                               3
                             </span>
                           </div>
                           <div className="text-xs text-slate-600">Leave</div>
                         </div>
-                        <div className="text-center p-3 bg-orange-50 rounded">
-                          <div className="w-6 h-6 bg-orange-500 rounded-full mx-auto mb-1 flex items-center justify-center">
+                        <div className="text-center p-2 bg-orange-50 rounded">
+                          <div className="w-5 h-5 bg-orange-500 rounded-full mx-auto mb-1 flex items-center justify-center">
                             <span className="text-white text-xs font-bold">
                               5
                             </span>
                           </div>
                           <div className="text-xs text-slate-600">Holiday</div>
+                        </div>
+                        <div className="text-center p-2 bg-yellow-50 rounded">
+                          <div className="w-5 h-5 bg-yellow-500 rounded-full mx-auto mb-1 flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">
+                              4
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-600">Late</div>
+                        </div>
+                        <div className="text-center p-2 bg-purple-50 rounded">
+                          <div className="w-5 h-5 bg-purple-500 rounded-full mx-auto mb-1 flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">
+                              1
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-600">Halfday</div>
+                        </div>
+                        <div className="text-center p-2 bg-pink-50 rounded col-span-2">
+                          <div className="w-5 h-5 bg-pink-500 rounded-full mx-auto mb-1 flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">
+                              0
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-600">Red Flag</div>
                         </div>
                       </div>
 
