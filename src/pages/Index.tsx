@@ -159,55 +159,6 @@ const Index = () => {
                     </CardContent>
                   </Card>
 
-                  {/* Quick Notes */}
-                  <Card className="bg-yellow-50 border-yellow-200 w-full min-w-0">
-                    <CardContent className="p-4 md:p-6 w-full">
-                      <div className="flex items-center mb-4">
-                        <StickyNote className="w-4 md:w-5 h-4 md:h-5 text-yellow-600 mr-2" />
-                        <span className="font-medium text-slate-900 text-sm md:text-base">
-                          Quick Notes
-                        </span>
-                      </div>
-                      <div className="space-y-3 mb-4">
-                        <div className="bg-white p-3 rounded border border-yellow-200">
-                          <div className="font-medium text-slate-900 text-sm">
-                            Follow up on client proposal
-                          </div>
-                          <div className="text-xs text-slate-500 mt-1">
-                            Added 2 hours ago
-                          </div>
-                        </div>
-                        <div className="bg-white p-3 rounded border border-yellow-200">
-                          <div className="font-medium text-slate-900 text-sm">
-                            Review Q4 budget allocation
-                          </div>
-                          <div className="text-xs text-slate-500 mt-1">
-                            Added yesterday
-                          </div>
-                        </div>
-                        <div className="bg-white p-3 rounded border border-yellow-200">
-                          <div className="font-medium text-slate-900 text-sm">
-                            Update team on project timeline
-                          </div>
-                          <div className="text-xs text-slate-500 mt-1">
-                            Added 3 days ago
-                          </div>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        <Button className="w-full bg-yellow-600 hover:bg-yellow-700 text-white text-sm">
-                          Add New Note
-                        </Button>
-                        <Button
-                          variant="ghost"
-                          className="w-full text-yellow-600 hover:bg-yellow-50 text-sm"
-                        >
-                          View All Notes
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-
                   {/* Pending Approvals */}
                   <Card className="bg-red-50 border-red-200 w-full min-w-0">
                     <CardContent className="p-4 md:p-6 w-full">
@@ -260,6 +211,55 @@ const Index = () => {
                       <Button className="w-full bg-red-600 hover:bg-red-700 text-white text-sm">
                         Review Approvals
                       </Button>
+                    </CardContent>
+                  </Card>
+
+                  {/* Quick Notes */}
+                  <Card className="bg-yellow-50 border-yellow-200 w-full min-w-0">
+                    <CardContent className="p-4 md:p-6 w-full">
+                      <div className="flex items-center mb-4">
+                        <StickyNote className="w-4 md:w-5 h-4 md:h-5 text-yellow-600 mr-2" />
+                        <span className="font-medium text-slate-900 text-sm md:text-base">
+                          Quick Notes
+                        </span>
+                      </div>
+                      <div className="space-y-3 mb-4">
+                        <div className="bg-white p-3 rounded border border-yellow-200">
+                          <div className="font-medium text-slate-900 text-sm">
+                            Follow up on client proposal
+                          </div>
+                          <div className="text-xs text-slate-500 mt-1">
+                            Added 2 hours ago
+                          </div>
+                        </div>
+                        <div className="bg-white p-3 rounded border border-yellow-200">
+                          <div className="font-medium text-slate-900 text-sm">
+                            Review Q4 budget allocation
+                          </div>
+                          <div className="text-xs text-slate-500 mt-1">
+                            Added yesterday
+                          </div>
+                        </div>
+                        <div className="bg-white p-3 rounded border border-yellow-200">
+                          <div className="font-medium text-slate-900 text-sm">
+                            Update team on project timeline
+                          </div>
+                          <div className="text-xs text-slate-500 mt-1">
+                            Added 3 days ago
+                          </div>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <Button className="w-full bg-yellow-600 hover:bg-yellow-700 text-white text-sm">
+                          Add New Note
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          className="w-full text-yellow-600 hover:bg-yellow-50 text-sm"
+                        >
+                          View All Notes
+                        </Button>
+                      </div>
                     </CardContent>
                   </Card>
                 </div>
