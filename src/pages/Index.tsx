@@ -290,43 +290,43 @@ const Index = () => {
                           <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">
                             03:43:14 am IST
                           </div>
-                          <div className="text-xs md:text-sm text-slate-600">
+                          <div className="text-xs md:text-sm text-muted-foreground">
                             Monday 23 Jun, 2025
                           </div>
                         </div>
 
-                        <div className="bg-blue-50 border border-blue-200 rounded p-3 mb-4">
+                        <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded p-3 mb-4">
                           <div className="flex items-center">
                             <Clock className="w-4 h-4 text-blue-600 mr-2" />
-                            <span className="text-sm font-medium text-blue-800">
+                            <span className="text-sm font-medium text-blue-800 dark:text-blue-300">
                               Office Hours
                             </span>
                           </div>
-                          <div className="text-sm text-blue-600 mt-1">
+                          <div className="text-sm text-blue-600 dark:text-blue-400 mt-1">
                             09:00 AM To 06:00 PM
                           </div>
                         </div>
 
                         <div className="mb-4">
                           <div className="flex items-center justify-between mb-2">
-                            <span className="text-sm font-medium">
+                            <span className="text-sm font-medium text-foreground">
                               Punch Status
                             </span>
                           </div>
-                          <div className="bg-red-50 border border-red-200 rounded p-3 mb-4">
-                            <div className="font-medium text-red-800 text-sm">
+                          <div className="bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 rounded p-3 mb-4">
+                            <div className="font-medium text-red-800 dark:text-red-400 text-sm">
                               NOT PUNCHED IN
                             </div>
                           </div>
                           <Button className="w-full bg-green-600 hover:bg-green-700 text-white text-sm">
                             ▷ PUNCH IN
                           </Button>
-                          <div className="text-xs text-center text-slate-500 mt-2">
+                          <div className="text-xs text-center text-muted-foreground mt-2">
                             Punch actions are tracked for attendance
                           </div>
                         </div>
 
-                        <div className="bg-orange-50 border border-orange-200 rounded p-3 mb-4">
+                        <div className="bg-orange-50 dark:bg-orange-950/30 border border-orange-200 dark:border-orange-800 rounded p-3 mb-4">
                           <div className="flex items-start">
                             <div className="flex-shrink-0 w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center mr-3 mt-0.5">
                               <span className="text-white text-xs font-bold">
@@ -334,7 +334,7 @@ const Index = () => {
                               </span>
                             </div>
                             <div className="flex-1">
-                              <div className="text-xs md:text-sm text-orange-800">
+                              <div className="text-xs md:text-sm text-orange-800 dark:text-orange-300">
                                 <span className="font-medium">
                                   Attendance is locked @11:31 AM.
                                 </span>{" "}
@@ -345,12 +345,12 @@ const Index = () => {
                           </div>
                         </div>
 
-                        <div className="border border-slate-200 rounded-lg p-3 md:p-4">
+                        <div className="border border-border rounded-lg p-3 md:p-4">
                           <div className="mb-3">
-                            <h3 className="text-xs md:text-sm font-semibold text-slate-900">
+                            <h3 className="text-xs md:text-sm font-semibold text-foreground">
                               Location Timeline
                             </h3>
-                            <p className="text-xs text-slate-600">
+                            <p className="text-xs text-muted-foreground">
                               (Tracked ONLY between Punch-in & Punch-out as per
                               Mandate of the company)
                             </p>
@@ -378,22 +378,22 @@ const Index = () => {
                       <CardContent className="p-4 md:p-6 w-full">
                         <div className="flex items-center mb-4">
                           <Bell className="w-4 md:w-5 h-4 md:h-5 text-orange-600 mr-2" />
-                          <span className="font-medium text-slate-900 text-sm md:text-base">
+                          <span className="font-medium text-foreground text-sm md:text-base">
                             Notice Board
                           </span>
                         </div>
-                        <div className="text-xs md:text-sm text-slate-600 mb-4">
+                        <div className="text-xs md:text-sm text-muted-foreground mb-4">
                           You're viewing for: All Branch
                         </div>
                         <div className="space-y-3 mb-4">
                           <div className="border-l-4 border-orange-500 pl-3">
-                            <div className="font-medium text-slate-900 text-sm">
+                            <div className="font-medium text-foreground text-sm">
                               Holiday Notice - Diwali Celebration
                             </div>
-                            <div className="text-xs text-slate-500 mt-1">
+                            <div className="text-xs text-muted-foreground mt-1">
                               2 hours ago
                             </div>
-                            <div className="text-xs text-slate-600 mt-1">
+                            <div className="text-xs text-muted-foreground mt-1">
                               Office will remain closed on October 24th for
                               Diwali...
                             </div>
