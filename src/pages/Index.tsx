@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { RecentChatActivity } from "@/components/RecentChatActivity";
 import {
   CheckSquare,
@@ -48,64 +49,142 @@ const Index = () => {
                     Quick Overview
                   </h2>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full">
-                    {/* My Tasks at a Glance */}
-                    <Card className="bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800 w-full min-w-0">
-                      <CardContent className="p-4 md:p-6 w-full">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full items-stretch">
+                    {/* Task at a Glance */}
+                    <Card className="bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800 w-full min-w-0 flex flex-col h-[450px]">
+                      <CardContent className="p-4 md:p-6 w-full flex flex-col h-full">
                         <div className="flex items-center mb-4">
                           <CheckSquare className="w-4 md:w-5 h-4 md:h-5 text-blue-600 mr-2" />
                           <span className="font-medium text-foreground text-sm md:text-base">
-                            My Tasks at a Glance
+                            Task at a Glance
                           </span>
                         </div>
-                        <div className="text-center mb-4 md:mb-6">
-                          <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-1">
-                            472
-                          </div>
-                          <div className="text-xs md:text-sm text-muted-foreground">
-                            Total Pending Tasks
-                          </div>
-                        </div>
-                        <div className="grid grid-cols-2 gap-3 md:gap-4 mb-4">
-                          <div className="text-center">
-                            <div className="w-8 h-8 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
-                              <AlertTriangle className="w-4 h-4 text-red-600" />
+
+                        <Tabs
+                          defaultValue="my-tasks"
+                          className="w-full flex flex-col flex-1"
+                        >
+                          <TabsList className="grid w-full grid-cols-2 mb-4">
+                            <TabsTrigger
+                              value="my-tasks"
+                              className="text-xs data-[state=active]:border-2 data-[state=active]:border-blue-600"
+                            >
+                              My Task
+                            </TabsTrigger>
+                            <TabsTrigger
+                              value="delegated-tasks"
+                              className="text-xs data-[state=active]:border-2 data-[state=active]:border-blue-600"
+                            >
+                              Delegated Task
+                            </TabsTrigger>
+                          </TabsList>
+
+                          <TabsContent
+                            value="my-tasks"
+                            className="flex flex-col flex-1"
+                          >
+                            <div className="flex-1">
+                              <div className="text-center mb-4 md:mb-6">
+                                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-1">
+                                  472
+                                </div>
+                                <div className="text-xs md:text-sm text-muted-foreground">
+                                  Total Pending Tasks
+                                </div>
+                              </div>
+                              <div className="grid grid-cols-2 gap-3 md:gap-4 mb-4">
+                                <div className="text-center">
+                                  <div className="w-8 h-8 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
+                                    <AlertTriangle className="w-4 h-4 text-red-600" />
+                                  </div>
+                                  <div className="text-lg md:text-xl font-bold text-red-600">
+                                    23
+                                  </div>
+                                  <div className="text-xs text-muted-foreground">
+                                    Overdue
+                                  </div>
+                                </div>
+                                <div className="text-center">
+                                  <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
+                                    <Clock className="w-4 h-4 text-orange-600" />
+                                  </div>
+                                  <div className="text-lg md:text-xl font-bold text-orange-600">
+                                    18
+                                  </div>
+                                  <div className="text-xs text-muted-foreground">
+                                    Due Today
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="mb-4">
+                                <div className="flex justify-between text-xs md:text-sm mb-1 text-foreground">
+                                  <span>Weekly Progress</span>
+                                  <span className="font-medium">85%</span>
+                                </div>
+                                <Progress value={85} className="h-2" />
+                              </div>
                             </div>
-                            <div className="text-lg md:text-xl font-bold text-red-600">
-                              23
+                            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm">
+                              View All My Tasks
+                            </Button>
+                          </TabsContent>
+
+                          <TabsContent
+                            value="delegated-tasks"
+                            className="flex flex-col flex-1"
+                          >
+                            <div className="flex-1">
+                              <div className="text-center mb-4 md:mb-6">
+                                <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-1">
+                                  89
+                                </div>
+                                <div className="text-xs md:text-sm text-muted-foreground">
+                                  Total Delegated Tasks
+                                </div>
+                              </div>
+                              <div className="grid grid-cols-2 gap-3 md:gap-4 mb-4">
+                                <div className="text-center">
+                                  <div className="w-8 h-8 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
+                                    <Clock className="w-4 h-4 text-yellow-600" />
+                                  </div>
+                                  <div className="text-lg md:text-xl font-bold text-yellow-600">
+                                    12
+                                  </div>
+                                  <div className="text-xs text-muted-foreground">
+                                    In Progress
+                                  </div>
+                                </div>
+                                <div className="text-center">
+                                  <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
+                                    <CheckSquare className="w-4 h-4 text-green-600" />
+                                  </div>
+                                  <div className="text-lg md:text-xl font-bold text-green-600">
+                                    77
+                                  </div>
+                                  <div className="text-xs text-muted-foreground">
+                                    Completed
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="mb-4">
+                                <div className="flex justify-between text-xs md:text-sm mb-1 text-foreground">
+                                  <span>Completion Rate</span>
+                                  <span className="font-medium">87%</span>
+                                </div>
+                                <Progress value={87} className="h-2" />
+                              </div>
                             </div>
-                            <div className="text-xs text-muted-foreground">
-                              Overdue
-                            </div>
-                          </div>
-                          <div className="text-center">
-                            <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-1">
-                              <Clock className="w-4 h-4 text-orange-600" />
-                            </div>
-                            <div className="text-lg md:text-xl font-bold text-orange-600">
-                              18
-                            </div>
-                            <div className="text-xs text-muted-foreground">
-                              Due Today
-                            </div>
-                          </div>
-                        </div>
-                        <div className="mb-4">
-                          <div className="flex justify-between text-xs md:text-sm mb-1 text-foreground">
-                            <span>Weekly Progress</span>
-                            <span className="font-medium">85%</span>
-                          </div>
-                          <Progress value={85} className="h-2" />
-                        </div>
-                        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm">
-                          View All My Tasks
-                        </Button>
+                            <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white text-sm">
+                              View Delegated Tasks
+                            </Button>
+                          </TabsContent>
+                        </Tabs>
                       </CardContent>
                     </Card>
 
                     {/* Meetings This Week */}
-                    <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800 w-full min-w-0">
-                      <CardContent className="p-4 md:p-6 w-full">
+                    <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800 w-full min-w-0 flex flex-col h-[450px]">
+                      <CardContent className="p-4 md:p-6 w-full flex flex-col h-full">
                         <div className="flex items-center mb-4">
                           <Calendar className="w-4 md:w-5 h-4 md:h-5 text-green-600 mr-2" />
                           <span className="font-medium text-foreground text-sm md:text-base">
@@ -120,7 +199,7 @@ const Index = () => {
                             Scheduled Meetings
                           </div>
                         </div>
-                        <div className="space-y-3 mb-4">
+                        <div className="space-y-3 mb-4 flex-grow">
                           <div className="border-l-2 border-green-600 pl-3">
                             <div className="font-medium text-foreground text-sm">
                               Upcoming
@@ -160,8 +239,8 @@ const Index = () => {
                     </Card>
 
                     {/* Pending Approvals */}
-                    <Card className="bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800 w-full min-w-0">
-                      <CardContent className="p-4 md:p-6 w-full">
+                    <Card className="bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800 w-full min-w-0 flex flex-col h-[450px]">
+                      <CardContent className="p-4 md:p-6 w-full flex flex-col h-full">
                         <div className="flex items-center mb-4">
                           <AlertTriangle className="w-4 md:w-5 h-4 md:h-5 text-red-600 mr-2" />
                           <span className="font-medium text-foreground text-sm md:text-base">
@@ -176,7 +255,7 @@ const Index = () => {
                             Items Awaiting Your Approval
                           </div>
                         </div>
-                        <div className="space-y-3 mb-4">
+                        <div className="space-y-3 mb-4 flex-grow">
                           <div className="bg-card border border-border p-3 rounded">
                             <div className="flex items-center justify-between">
                               <div>
@@ -214,16 +293,16 @@ const Index = () => {
                       </CardContent>
                     </Card>
 
-                    {/* Quick Notes */}
-                    <Card className="bg-yellow-50 dark:bg-yellow-950/20 border-yellow-200 dark:border-yellow-800 w-full min-w-0">
-                      <CardContent className="p-4 md:p-6 w-full">
+                    {/* Notes & Reminder */}
+                    <Card className="bg-yellow-50 dark:bg-yellow-950/20 border-yellow-200 dark:border-yellow-800 w-full min-w-0 flex flex-col h-[450px]">
+                      <CardContent className="p-4 md:p-6 w-full flex flex-col h-full">
                         <div className="flex items-center mb-4">
                           <StickyNote className="w-4 md:w-5 h-4 md:h-5 text-yellow-600 mr-2" />
                           <span className="font-medium text-foreground text-sm md:text-base">
-                            Quick Notes
+                            Notes & Reminder
                           </span>
                         </div>
-                        <div className="space-y-3 mb-4">
+                        <div className="space-y-3 mb-4 flex-grow">
                           <div className="bg-card border border-border p-3 rounded">
                             <div className="font-medium text-foreground text-sm">
                               Follow up on client proposal
